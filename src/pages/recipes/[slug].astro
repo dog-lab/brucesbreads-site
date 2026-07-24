@@ -1,0 +1,126 @@
+---
+import { getCollection, render } from 'astro:content';
+import RecipeLayout from '../../layouts/RecipeLayout.astro';
+
+export async function getStaticPaths() {
+  const recipes = await getCollection('recipes');
+  return recipes.map((recipe) => ({
+    params: { slug: recipe.id },
+    props: { recipe },
+  }));
+}
+
+const { recipe } = Astro.props;
+const { Content } = await render(recipe);
+const {
+  title, subtitle, heroImage, dough, inclusions, yieldNote, ddt,
+  timeline, steps, nutritionBasis, nutritionFacts, vitamins, nutritionNote, playlist,
+} = recipe.data;
+---
+<RecipeLayout title={title}>
+  <div class="recipe-title-block">
+    <h1>{title}</h1>
+    <p class="subtitle">{subtitle}</p>
+  </div>
+
+  <div class="recipe-hero">
+    <img src={heroImage} alt={title} />
+  </div>
+
+  <main>
+
+    <section class="block" id="recipe-card">
+      <h2>Recipe Card</h2>
+      <h3>Dough Ingredients</h3>
+      <table>
+        <tbody>
+          {dough.map((row) => (
+            <tr style={row.isTotal ? 'font-weight:bold;' : ''}>
+              <td>{row.name}</td>
+              <td>{row.weight}</td>
+              <td>{row.percent}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      {inclusions.length > 0 && (
+        <>
+          <h3>Inclusions</h3>
+          <table>
+            <tbody>
+              {inclusions.map((row) => (
+                <tr style={row.isTotal ? 'font-weight:bold;' : ''}>
+                  <td>{row.name}</td>
+                  <td>{row.weight}</td>
+                  <td>{row.percent}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </>
+      )}
+
+      <p>{yieldNote}</p>
+      <p>Target DDT: {ddt}</p>
+    </section>
+
+    <section class="block">
+      <h2>Timeline</h2>
+      <ul>
+        <li><b>Feed starter:</b> {timeline.feed}</li>
+        <li><b>Mix:</b> {timeline.mix}</li>
+        <li><b>Bulk ferment:</b> {timeline.bulk}</li>
+        <li><b>Shape:</b> {timeline.shape}</li>
+        <li><b>Proof:</b> {timeline.proof}</li>
+        <li><b>Bake:</b> {timeline.bake}</li>
+        <li><b>Cool:</b> {timeline.cool}</li>
+      </ul>
+    </section>
+
+    <section class="block">
+      <h2>Step-by-Step, Condensed</h2>
+      <ol>
+        {steps.map((step) => <li>{step}</li>)}
+      </ol>
+    </section>
+
+    <section class="block">
+      <h2>Estimated Nutrition</h2>
+      <p>{nutritionBasis}</p>
+      <table>
+        <tbody>
+          {nutritionFacts.map((f) => (
+            <tr><td>{f.label}</td><td>{f.amount}</td></tr>
+          ))}
+        </tbody>
+      </table>
+      <p><strong>Notable Vitamins &amp; Minerals:</strong></p>
+      <ul>
+        {vitamins.map((v) => (
+          <li><b>{v.ingredient}:</b> {v.description}</li>
+        ))}
+      </ul>
+      {nutritionNote && <p>{nutritionNote}</p>}
+    </section>
+
+    <section class="block">
+      <h2>Baking Music Playlist</h2>
+      {playlist.map((phase) => (
+        <div class="playlist-group">
+          <h4>{phase.phase}</h4>
+          <ul>
+            {phase.tracks.map((t) => (
+              <li>{t.artist} — "{t.track}" ({t.album}, {t.year})</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </section>
+
+    <section class="block">
+      <Content />
+    </section>
+
+  </main>
+</RecipeLayout>

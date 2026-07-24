@@ -1,0 +1,217 @@
+---
+// Minimal real homepage — just enough to prove the pipeline (repo ->
+// Netlify -> live URL) and to link to the two migrated content pages.
+// During the full migration this gets the complete menu grid (all 6
+// recipes) and Sami card grid (all 3 stories) back, generated from the
+// collections instead of hand-written.
+import { getCollection } from 'astro:content';
+
+const recipes = await getCollection('recipes');
+const stories = await getCollection('sami');
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bruce's Breads — Sourdough So Good It's Almost Suspicious</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    nav a:hover { color: #5c4a37; }
+
+    .hero {
+      position: relative;
+      height: 78vh;
+      min-height: 460px;
+      overflow: hidden;
+    }
+    .hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: brightness(0.7);
+    }
+    .hero-text {
+      position: absolute;
+      top: 50%;
+      left: 6%;
+      transform: translateY(-50%);
+      color: #fff;
+      max-width: 600px;
+    }
+    .hero-text h1 {
+      font-size: 3rem;
+      margin: 0 0 12px;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    }
+    .hero-text p {
+      font-size: 1.25rem;
+      margin: 0 0 24px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+    section {
+      padding: 30px 6%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    #about {
+      max-width: none;
+      margin: 0;
+      padding: 0;
+    }
+    #about .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 15px 6%;
+    }
+    .tagline-banner {
+      background: var(--egg-wash);
+      text-align: center;
+      padding: 14px;
+      font-weight: bold;
+      color: var(--dark-text);
+      font-size: 1.05rem;
+    }
+    h2 {
+      text-align: center;
+      color: var(--crust);
+      font-size: 2.2rem;
+      margin-top: 8px;
+    }
+    .subhead {
+      text-align: center;
+      font-style: italic;
+      color: #5c4a37;
+      margin-bottom: 40px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      text-align: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+    .card .emoji {
+      font-size: 2.6rem;
+      margin-bottom: 10px;
+    }
+    .card h3 {
+      margin: 6px 0;
+      color: var(--crust);
+    }
+    .card a.recipe-link {
+      display: inline-block;
+      margin-top: 12px;
+      color: #5c4a37;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .card a.recipe-link:hover { text-decoration: underline; }
+    .about {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .about img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 50%;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+    .about-text { flex: 1; min-width: 260px; }
+    blockquote {
+      border-left: 4px solid var(--tomato);
+      padding-left: 16px;
+      font-style: italic;
+      color: #5c4a37;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <img src="/logo_v2_cropped.png" alt="Bruce's Breads logo" class="logo" />
+  </div>
+  <nav>
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#sami">Sami</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <img src="/hero.png" alt="Bruce holding a fresh loaf of bread triumphantly" />
+  <div class="hero-text">
+    <h1>Sourdough So Good It's Almost Suspicious.</h1>
+    <p>Handcrafted bread, baked daily by a man with absolutely nothing to comb but a whole lot to prove.</p>
+    <a href="#menu" class="btn">See What's Baking &rarr;</a>
+  </div>
+</div>
+
+<div class="tagline-banner">
+  All bread lovingly brought to you by <strong>Bruce the Bald Baker</strong>
+</div>
+
+<section id="menu">
+  <h2>What's Rising Today</h2>
+  <p class="subhead">Every loaf is proofed longer than Bruce's hairline has been gone. (Migration in progress — more recipes landing here soon.)</p>
+  <div class="grid">
+    {recipes.map((recipe) => (
+      <div class="card">
+        <div class="emoji">🫑</div>
+        <h3>{recipe.data.title}</h3>
+        <p>{recipe.data.subtitle}</p>
+        <a href={`/recipes/${recipe.id}/`} class="recipe-link">View recipe &rarr;</a>
+      </div>
+    ))}
+  </div>
+</section>
+
+<section id="about" style="background: var(--wheat-100);">
+  <div class="section-inner">
+    <h2>Meet the Baker</h2>
+    <p class="subhead">No hair. No worries. Just bread.</p>
+    <div class="about">
+      <img src="/hero.png" alt="Bruce the Bald Baker" />
+      <div class="about-text">
+        <p>Bruce started baking bread twenty years ago after one particularly stubborn loaf convinced him he'd found his calling. What began as a weekend hobby turned into a full-blown bakery obsession.</p>
+        <blockquote>"They say a bald head reflects light. I like to think mine reflects glory — mostly the glory of a perfectly baked crust." — Bruce</blockquote>
+        <p>Today, Bruce bakes every loaf by hand, kneads out his stress, and firmly believes a good crust can fix most of life's problems.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="sami">
+  <h2>Meet Sami the Sourdough Sandwich</h2>
+  <p class="subhead">Half loaf, half legend, entirely delicious. (More adventures landing here as they migrate over.)</p>
+  <div class="grid">
+    {stories.map((story) => (
+      <div class="card">
+        <div class="emoji">{story.data.mapPin.emoji}</div>
+        <h3>{story.data.title.replace('Sami the Sourdough Sandwich ', '')}</h3>
+        <p>{story.data.subtitle}</p>
+        <a href={`/sami/${story.id}/`} class="recipe-link">Read the adventure &rarr;</a>
+      </div>
+    ))}
+  </div>
+</section>
+
+<footer>
+  <p>Bruce's Breads &middot; Fresh Bread, Fresh Puns, Zero Hair</p>
+  <div class="signature">Bread proudly brought to you by Bruce the Bald Baker</div>
+  <div class="fine-print">&copy; 2026 Bruce's Breads. All rights reserved. No baldness jokes were harmed in the making of this website (Bruce made most of them himself).</div>
+</footer>
+
+</body>
+</html>

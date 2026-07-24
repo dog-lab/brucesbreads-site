@@ -1,0 +1,87 @@
+/* Bruce's Breads — shared site stylesheet
+   Palette, header/nav, buttons, and footer — the rules that are
+   byte-for-byte identical across index.html and every recipes/*.html
+   and sami/*.html page. Page-specific rules (hero, section layout,
+   recipe tables, story-map SVG, etc.) stay in each page's own
+   inline <style> block. */
+
+:root {
+  --crust: #8B7355;
+  --crust-dark: #5c4a37;
+  --crumb: #F5E6D3;
+  --egg-wash: #C9A961;
+  --tomato: #d9503f;
+  --dark-text: #2C2C2C;
+  --wheat-100: #FFFFFF;
+  --wheat-200: #C9A961;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Segoe UI', sans-serif;
+  background: var(--crumb);
+  color: var(--dark-text);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 6%;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+header .brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+header img.logo {
+  height: 52px;
+  width: auto;
+}
+nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: var(--dark-text);
+  font-weight: 600;
+}
+/* nav a:hover color is page-specific (index.html uses crust-dark,
+   recipe/sami pages use tomato) — declared locally in each page. */
+
+.btn {
+  display: inline-block;
+  background: var(--tomato);
+  color: #fff;
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.05rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform 0.15s ease;
+}
+.btn:hover { transform: scale(1.05); }
+
+footer {
+  background: var(--dark-text);
+  color: #fff;
+  text-align: center;
+  padding: 30px 6%;
+}
+footer .signature {
+  margin-top: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--egg-wash);
+}
+footer .fine-print {
+  margin-top: 14px;
+  font-size: 0.8rem;
+  color: var(--egg-wash);
+}

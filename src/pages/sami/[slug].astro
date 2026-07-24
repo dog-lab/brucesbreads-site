@@ -1,0 +1,33 @@
+---
+import { getCollection, render } from 'astro:content';
+import SamiLayout from '../../layouts/SamiLayout.astro';
+
+export async function getStaticPaths() {
+  const stories = await getCollection('sami');
+  return stories.map((story) => ({
+    params: { slug: story.id },
+    props: { story },
+  }));
+}
+
+const { story } = Astro.props;
+const { Content } = await render(story);
+const { title, subtitle, heroImage, heroAlt, closingLine } = story.data;
+---
+<SamiLayout title={title}>
+  <div class="title-block">
+    <h1>{title}</h1>
+    <p class="subtitle">{subtitle}</p>
+  </div>
+
+  <div class="hero">
+    <img src={heroImage} alt={heroAlt} />
+  </div>
+
+  <main>
+    <Content />
+    <p class="closing">{closingLine}</p>
+  </main>
+
+  <p class="more-soon">More of Sami's adventures are on the way.</p>
+</SamiLayout>

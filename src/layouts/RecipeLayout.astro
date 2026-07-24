@@ -1,0 +1,75 @@
+---
+// Real chrome, ported from website/recipes/*.html + the shared
+// website/styles.css. /styles.css and /logo_v2_cropped.png are served
+// from the public/ folder at the site root.
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} — Bruce's Breads</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style is:global>
+    /* is:global on purpose: the recipe content below (title block, hero,
+       tables, etc.) is passed in via <slot/> from src/pages/recipes/[slug].astro,
+       and Astro only auto-scopes CSS to elements rendered by *this* component's
+       own template -- slotted content from the parent page doesn't get the
+       scoping attribute, so a normal scoped <style> here would silently not
+       match any of it. is:global opts out of that scoping so these rules
+       apply the way they visually should. */
+    body { line-height: 1.6; }
+    nav a:hover { color: var(--tomato); }
+    footer { margin-top: 40px; }
+    .recipe-hero { position: relative; }
+    .recipe-hero img { width: 100%; max-height: 480px; object-fit: cover; display: block; }
+    .recipe-title-block { text-align: center; padding: 36px 6% 10px; max-width: 900px; margin: 0 auto; }
+    .recipe-title-block h1 { color: var(--crust); font-size: 2.6rem; margin: 0 0 8px; }
+    .recipe-title-block .subtitle { font-style: italic; color: #5c4a37; font-size: 1.15rem; }
+    main { max-width: 900px; margin: 0 auto; padding: 0 6% 60px; }
+    section.block { margin-top: 56px; }
+    h2 { color: var(--crust); font-size: 1.9rem; border-bottom: 3px solid var(--egg-wash); padding-bottom: 8px; }
+    h3 { color: var(--crust); font-size: 1.3rem; margin-top: 28px; }
+    h4 { color: var(--tomato); margin-bottom: 6px; }
+    table { width: 100%; border-collapse: collapse; margin: 18px 0; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
+    th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #eee0c8; }
+    th { background: var(--egg-wash); color: var(--dark-text); }
+    tr:last-child td { border-bottom: none; }
+    ul, ol { padding-left: 22px; }
+    li { margin-bottom: 8px; }
+    figure { margin: 20px 0; }
+    figure img { width: 100%; border-radius: 14px; box-shadow: 0 4px 14px rgba(0,0,0,0.1); display: block; }
+    .callout { background: #fff; border-left: 4px solid var(--tomato); padding: 14px 18px; border-radius: 0 10px 10px 0; margin: 16px 0; }
+    .playlist-group { margin-bottom: 22px; }
+    .playlist-group h4 { margin-bottom: 4px; }
+    .back-link { display: inline-block; margin: 28px 6% 0; color: var(--tomato); text-decoration: none; font-weight: 600; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand"><img src="/logo_v2_cropped.png" alt="Bruce's Breads logo" class="logo" /></div>
+    <nav>
+      <a href="/#menu">Menu</a>
+      <a href="/#about">About</a>
+      <a href="/#sami">Sami</a>
+    </nav>
+  </header>
+
+  <a class="back-link" href="/#menu">&larr; Back to the menu</a>
+
+  <slot />
+
+  <footer>
+    <p>Bruce's Breads &middot; Fresh Bread, Fresh Puns, Zero Hair</p>
+    <div class="signature">Bread proudly brought to you by Bruce the Bald Baker</div>
+    <div class="fine-print">&copy; 2026 Bruce's Breads. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>

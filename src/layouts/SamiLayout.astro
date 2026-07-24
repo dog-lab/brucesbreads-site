@@ -1,0 +1,61 @@
+---
+// Real chrome, ported from website/sami/*.html + the shared
+// website/styles.css.
+interface Props {
+  title: string;
+}
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} — Bruce's Breads</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style is:global>
+    /* is:global on purpose -- see the matching note in RecipeLayout.astro:
+       the story content below arrives via <slot/> from
+       src/pages/sami/[slug].astro, so scoped CSS here wouldn't match it. */
+    body { line-height: 1.7; }
+    nav a:hover { color: var(--tomato); }
+    footer { margin-top: 40px; }
+    .hero { position: relative; }
+    .hero img { width: 100%; max-height: 520px; object-fit: cover; display: block; }
+    .title-block { text-align: center; padding: 36px 6% 10px; max-width: 760px; margin: 0 auto; }
+    .title-block h1 { color: var(--crust); font-size: 2.4rem; margin: 0 0 8px; }
+    .title-block .subtitle { font-style: italic; color: #5c4a37; font-size: 1.1rem; }
+    main { max-width: 720px; margin: 0 auto; padding: 20px 6% 60px; font-size: 1.08rem; }
+    main p { margin: 0 0 22px; }
+    figure { margin: 34px 0; }
+    figure img { width: 100%; border-radius: 16px; box-shadow: 0 6px 18px rgba(0,0,0,0.15); display: block; }
+    figcaption { font-size: 0.85rem; color: #5c4a37; text-align: center; margin-top: 8px; font-style: italic; }
+    .closing { text-align: center; font-weight: bold; color: var(--crust); font-size: 1.2rem; margin-top: 40px; }
+    .more-soon { text-align: center; font-style: italic; color: #5c4a37; margin-top: 12px; }
+    .back-link { display: inline-block; margin: 28px 6% 0; color: var(--tomato); text-decoration: none; font-weight: 600; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand"><img src="/logo_v2_cropped.png" alt="Bruce's Breads logo" class="logo" /></div>
+    <nav>
+      <a href="/#menu">Menu</a>
+      <a href="/#about">About</a>
+      <a href="/#sami">Sami</a>
+    </nav>
+  </header>
+
+  <a class="back-link" href="/#sami">&larr; Back to Sami's page</a>
+
+  <slot />
+
+  <footer>
+    <p>Bruce's Breads &middot; Fresh Bread, Fresh Puns, Zero Hair</p>
+    <div class="signature">Bread proudly brought to you by Bruce the Bald Baker</div>
+    <div class="fine-print">&copy; 2026 Bruce's Breads. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
