@@ -13,8 +13,12 @@ export async function getStaticPaths() {
 const { recipe } = Astro.props;
 const { Content } = await render(recipe);
 const {
-  title, subtitle, heroImage, dough, inclusions, yieldNote, ddt,
-  timeline, steps, nutritionBasis, nutritionFacts, vitamins, nutritionNote, playlist,
+  title, subtitle, heroImage, cardFilePrefix,
+  dough, hydrationSaltNote, inclusions, yieldNote,
+  flatlayImage, flatlayAlt,
+  nonstandardIngredients, nonstandardIngredientsNote,
+  nutritionBasis, nutritionCaveat, nutritionFacts, vitamins, nutritionNote,
+  equipment, playlist, booksMovies,
 } = recipe.data;
 ---
 <RecipeLayout title={title}>
@@ -29,71 +33,67 @@ const {
 
   <main>
 
+    <div class="callout printable-extras">
+      <strong>Printable extras:</strong>
+      <a href={`/cards/${cardFilePrefix}_Recipe_Card.pdf`} class="pdf-pill">Recipe Card (PDF)</a>
+      <a href={`/cards/${cardFilePrefix}_Steps_Card.pdf`} class="pdf-pill">Steps Card (PDF)</a>
+      <a href={`/cards/${cardFilePrefix}_Nutrition_Card.pdf`} class="pdf-pill">Nutrition Card (PDF)</a>
+    </div>
+
     <section class="block" id="recipe-card">
       <h2>Recipe Card</h2>
+
       <h3>Dough Ingredients</h3>
       <table>
-        <tbody>
-          {dough.map((row) => (
-            <tr style={row.isTotal ? 'font-weight:bold;' : ''}>
-              <td>{row.name}</td>
-              <td>{row.weight}</td>
-              <td>{row.percent}</td>
-            </tr>
-          ))}
-        </tbody>
+        <tr><th>Ingredient</th><th>Weight (g)</th><th>Baker's %</th></tr>
+        {dough.map((row) => (
+          <tr style={row.isTotal ? 'font-weight:bold;' : ''}>
+            <td>{row.name}</td>
+            <td>{row.weight}</td>
+            <td>{row.percent}</td>
+          </tr>
+        ))}
       </table>
+      {hydrationSaltNote && <p><strong>A note on hydration and salt:</strong> {hydrationSaltNote}</p>}
 
       {inclusions.length > 0 && (
         <>
           <h3>Inclusions</h3>
           <table>
-            <tbody>
-              {inclusions.map((row) => (
-                <tr style={row.isTotal ? 'font-weight:bold;' : ''}>
-                  <td>{row.name}</td>
-                  <td>{row.weight}</td>
-                  <td>{row.percent}</td>
-                </tr>
-              ))}
-            </tbody>
+            <tr><th>Inclusion</th><th>Weight (g)</th><th>Baker's %</th><th>Notes</th></tr>
+            {inclusions.map((row) => (
+              <tr style={row.isTotal ? 'font-weight:bold;' : ''}>
+                <td>{row.name}</td>
+                <td>{row.weight}</td>
+                <td>{row.percent}</td>
+                <td>{row.notes}</td>
+              </tr>
+            ))}
           </table>
         </>
       )}
-
       <p>{yieldNote}</p>
-      <p>Target DDT: {ddt}</p>
-    </section>
 
-    <section class="block">
-      <h2>Timeline</h2>
-      <ul>
-        <li><b>Feed starter:</b> {timeline.feed}</li>
-        <li><b>Mix:</b> {timeline.mix}</li>
-        <li><b>Bulk ferment:</b> {timeline.bulk}</li>
-        <li><b>Shape:</b> {timeline.shape}</li>
-        <li><b>Proof:</b> {timeline.proof}</li>
-        <li><b>Bake:</b> {timeline.bake}</li>
-        <li><b>Cool:</b> {timeline.cool}</li>
-      </ul>
-    </section>
+      {flatlayImage && <figure><img src={flatlayImage} alt={flatlayAlt} /></figure>}
 
-    <section class="block">
-      <h2>Step-by-Step, Condensed</h2>
-      <ol>
-        {steps.map((step) => <li>{step}</li>)}
-      </ol>
-    </section>
-
-    <section class="block">
-      <h2>Estimated Nutrition</h2>
-      <p>{nutritionBasis}</p>
-      <table>
-        <tbody>
-          {nutritionFacts.map((f) => (
-            <tr><td>{f.label}</td><td>{f.amount}</td></tr>
+      <h3>Notes on Nonstandard Ingredients</h3>
+      {nonstandardIngredients.length > 0 ? (
+        <ul>
+          {nonstandardIngredients.map((item) => (
+            <li><strong>{item.ingredient}:</strong> {item.note}</li>
           ))}
-        </tbody>
+        </ul>
+      ) : (
+        nonstandardIngredientsNote && <p>{nonstandardIngredientsNote}</p>
+      )}
+
+      <h3>Estimated Nutrition</h3>
+      <p><strong>Basis:</strong> {nutritionBasis}. {nutritionCaveat}</p>
+      <table>
+        <tr><th>Nutrient</th><th>Amount</th></tr>
+        {nutritionFacts.map((f) => (
+          <tr><td>{f.label}</td><td>{f.amount}</td></tr>
+        ))}
       </table>
       <p><strong>Notable Vitamins &amp; Minerals:</strong></p>
       <ul>
@@ -102,6 +102,23 @@ const {
         ))}
       </ul>
       {nutritionNote && <p>{nutritionNote}</p>}
+
+      <h3>Equipment</h3>
+      <ul>
+        {equipment.map((item) => <li>{item}</li>)}
+      </ul>
+    </section>
+
+    {/*
+      Everything from here on -- any prep-ahead component, the full
+      Step-by-Step Tutorial Script (with its pH-check callouts), Alternatives
+      and Improvements, Troubleshooting/FAQ (as a raw HTML table), Ingredient
+      History Story, and Bloopers -- comes from the Markdown body in that
+      exact order. See the comment in content.config.ts for why this stays
+      body content rather than structured fields.
+    */}
+    <section class="block">
+      <Content />
     </section>
 
     <section class="block">
@@ -119,7 +136,17 @@ const {
     </section>
 
     <section class="block">
-      <Content />
+      <h2>If You Like This Bake, You Might Like These Books &amp; Movies</h2>
+      {booksMovies.map((group) => (
+        <div class="playlist-group">
+          <h4>{group.groupTitle}</h4>
+          <ul>
+            {group.items.map((item) => (
+              <li><b>{item.title}</b> — {item.note}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </section>
 
   </main>

@@ -100,6 +100,14 @@ const stories = await getCollection('sami');
       font-size: 2.6rem;
       margin-bottom: 10px;
     }
+    .card .card-thumb {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 14px;
+      display: block;
+    }
     .card h3 {
       margin: 6px 0;
       color: var(--crust);
@@ -168,7 +176,7 @@ const stories = await getCollection('sami');
   <div class="grid">
     {recipes.map((recipe) => (
       <div class="card">
-        <div class="emoji">🫑</div>
+        <img src={recipe.data.heroImage} alt={recipe.data.title} class="card-thumb" />
         <h3>{recipe.data.title}</h3>
         <p>{recipe.data.subtitle}</p>
         <a href={`/recipes/${recipe.id}/`} class="recipe-link">View recipe &rarr;</a>
@@ -194,7 +202,7 @@ const stories = await getCollection('sami');
 
 <section id="sami">
   <h2>Meet Sami the Sourdough Sandwich</h2>
-  <p class="subhead">Half loaf, half legend, entirely delicious. (More adventures landing here as they migrate over.)</p>
+  <p class="subhead">Half loaf, half legend, entirely delicious.</p>
   <div class="grid">
     {stories.map((story) => (
       <div class="card">
@@ -205,6 +213,7 @@ const stories = await getCollection('sami');
       </div>
     ))}
   </div>
+  <p class="subhead" style="margin-top:32px;">More of Sami's adventures are on the way. <a href="/sami/story-map/" class="recipe-link">See Sami's map &rarr;</a></p>
 </section>
 
 <footer>

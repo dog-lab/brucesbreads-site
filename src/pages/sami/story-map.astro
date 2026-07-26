@@ -1,0 +1,95 @@
+---
+// Ported from website/sami/story-map.html. Reuses SamiLayout for the
+// shared header/nav/footer chrome, with page-specific styles for the
+// real-map SVG and stop-card grid kept local (same pattern RecipeLayout
+// pages use for their own block-specific styles).
+import SamiLayout from '../../layouts/SamiLayout.astro';
+---
+<SamiLayout title="Sami's Map">
+  <style>
+    main { max-width: 900px; }
+    main > p { text-align: center; max-width: 700px; margin-left: auto; margin-right: auto; }
+    .real-map-section { text-align: center; margin: 40px 0; }
+    .real-map-section h2 { color: var(--crust); font-size: 1.5rem; margin: 0 0 4px; }
+    .real-map-section .map-caption { font-style: italic; color: #5c4a37; font-size: 0.95rem; margin: 0 0 20px; }
+    .real-map-card { background: #fff; border: 1px solid var(--wheat-200); border-radius: 16px; padding: 20px; box-shadow: 0 4px 14px rgba(0,0,0,0.06); display: inline-block; max-width: 480px; width: 100%; }
+    .real-map-card svg { width: 100%; height: auto; display: block; }
+    .stops { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 24px; margin-top: 32px; }
+    .stop-card { background: #fff; border: 1px solid var(--wheat-200); border-radius: 16px; padding: 24px; text-align: center; box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
+    .stop-card .pin { font-size: 1.8rem; }
+    .stop-card h3 { color: var(--crust); margin: 8px 0 6px; }
+    .stop-card p { font-size: 0.95rem; color: #5c4a37; margin: 0 0 14px; }
+    .stop-card a.recipe-link { color: var(--tomato); text-decoration: none; font-weight: 600; }
+    .stop-card a.recipe-link:hover { text-decoration: underline; }
+  </style>
+
+  <div class="title-block">
+    <h1>Sami's Map</h1>
+    <p class="subtitle">Every stop on the journey so far, one crumb trail at a time.</p>
+  </div>
+
+  <div class="hero">
+    <img src="/images/sami/sami-story-map.png" alt="Sami the sourdough sandwich resting on a vintage paper map of Georgia, with small props marking Driftwood Beach, Tallulah Gorge, and the Saturday Farmers Market" />
+  </div>
+
+  <main>
+
+    <p>Sami's gotten around more than a sandwich has any right to. Here's everywhere he's been so far — pin your own next stop, because more adventures are always in the works.</p>
+
+    <div class="real-map-section">
+      <h2>The Real Map</h2>
+      <p class="map-caption">An actual map of Georgia, pinned with Sami's actual stops. Click a pin to read that adventure.</p>
+      <div class="real-map-card">
+        <svg viewBox="0 0 600 700" preserveAspectRatio="xMidYMid meet" overflow="hidden" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of Georgia with three pins: Driftwood Beach, Tallulah Gorge, and the Saturday Farmers Market">
+          <style>
+            .pin-dot { fill: #d9503f; stroke: #ffffff; stroke-width: 2.5; transition: r 0.15s ease; }
+            a.pin-link { cursor: pointer; }
+            a.pin-link:hover .pin-dot { r: 11; }
+            a.pin-link text { fill: #5c4a37; }
+            a.pin-link:hover text { fill: #d9503f; }
+          </style>
+          <path fill="#FFFFFF" stroke="#8B7355" stroke-width="3" stroke-linejoin="round" d="M 20.00,79.06 L 36.46,79.26 L 93.85,78.66 L 171.08,78.56 L 253.79,78.76 L 253.37,78.15 L 313.72,77.14 L 312.45,84.41 L 299.37,91.28 L 288.39,101.89 L 288.82,105.52 L 285.44,108.15 L 286.71,114.61 L 299.37,122.90 L 306.54,123.60 L 316.25,134.11 L 325.95,139.26 L 337.77,137.64 L 341.15,138.85 L 344.52,145.32 L 345.79,151.78 L 350.85,154.81 L 352.12,159.86 L 356.76,165.12 L 356.76,170.27 L 359.71,177.13 L 364.78,179.56 L 368.15,186.33 L 374.06,191.17 L 378.70,201.38 L 382.50,201.48 L 390.52,208.75 L 402.76,214.00 L 415.00,223.90 L 416.68,230.06 L 420.48,234.20 L 420.90,238.24 L 426.39,242.08 L 431.45,242.28 L 438.63,246.02 L 446.22,255.41 L 452.55,258.04 L 454.24,260.46 L 451.29,264.80 L 452.98,268.74 L 451.29,271.98 L 463.10,280.26 L 461.42,283.29 L 466.90,287.53 L 471.54,287.03 L 470.70,291.17 L 474.08,295.71 L 485.47,301.27 L 489.27,301.17 L 496.02,307.02 L 504.04,311.37 L 501.93,318.13 L 506.99,324.60 L 507.84,329.55 L 511.64,331.06 L 511.64,339.65 L 513.32,342.88 L 511.21,347.42 L 513.75,348.23 L 515.43,353.08 L 513.32,357.22 L 518.39,362.07 L 528.94,364.70 L 528.94,367.02 L 538.64,375.20 L 536.96,378.63 L 543.29,389.24 L 544.97,388.84 L 547.51,396.51 L 543.29,400.96 L 547.93,407.72 L 546.24,410.35 L 548.35,416.61 L 557.21,420.05 L 561.85,418.33 L 571.14,425.50 L 574.94,425.90 L 580.00,427.12 L 577.89,433.58 L 571.98,436.51 L 567.76,434.99 L 565.23,439.84 L 569.45,440.65 L 562.70,446.71 L 553.84,444.39 L 552.57,450.04 L 557.21,451.15 L 553.41,457.11 L 546.24,462.57 L 539.07,461.25 L 537.80,462.87 L 542.86,466.20 L 546.24,465.70 L 545.82,474.18 L 542.86,480.44 L 531.05,483.07 L 531.05,485.29 L 538.22,484.28 L 540.75,486.71 L 531.05,499.94 L 528.52,509.13 L 531.47,510.44 L 529.36,513.47 L 527.25,523.27 L 521.76,525.49 L 518.39,531.45 L 514.59,531.75 L 514.59,538.92 L 511.64,545.89 L 508.68,545.69 L 503.62,550.14 L 509.10,552.56 L 513.75,550.14 L 514.17,558.32 L 507.42,574.58 L 509.53,581.65 L 504.04,579.73 L 498.13,581.24 L 490.96,579.43 L 477.03,577.51 L 474.08,574.98 L 466.48,572.15 L 459.31,571.85 L 456.35,568.52 L 450.02,567.81 L 446.22,573.77 L 441.16,572.96 L 442.85,575.39 L 439.47,577.00 L 439.89,581.95 L 438.21,588.01 L 443.27,597.20 L 442.00,609.22 L 439.47,613.97 L 439.47,621.54 L 423.86,622.86 L 419.22,615.18 L 420.48,608.01 L 417.53,605.38 L 416.68,599.63 L 418.79,598.21 L 361.82,594.78 L 274.89,589.63 L 164.75,583.97 L 107.35,581.45 L 101.45,576.60 L 98.91,569.02 L 98.07,560.64 L 93.43,555.39 L 90.90,547.41 L 90.05,541.25 L 87.10,534.78 L 78.66,525.59 L 79.92,520.14 L 77.81,514.99 L 80.77,512.87 L 80.35,504.89 L 83.72,496.81 L 82.88,492.46 L 85.83,486.71 L 84.57,474.59 L 76.55,465.80 L 77.39,461.36 L 74.86,448.83 L 76.13,444.29 L 82.03,437.01 L 84.99,428.33 L 85.83,419.64 L 84.57,413.98 L 90.05,408.73 L 95.96,406.61 L 95.12,404.19 L 99.76,404.19 L 103.98,398.94 L 98.91,394.90 L 91.32,392.07 L 95.54,380.25 L 91.74,376.61 L 90.47,368.33 L 83.30,361.36 L 79.08,354.09 L 76.97,339.04 L 71.48,334.50 L 73.17,330.86 L 69.37,327.63 L 55.45,255.61 L 49.12,224.20 L 43.63,194.51 L 36.04,156.23 L 26.33,111.48 L 20.00,79.06 Z" />
+
+          <a href="/sami/tallulah-gorge/" class="pin-link">
+            <circle class="pin-dot" fill="#d9503f" stroke="#ffffff" stroke-width="2.5" cx="280.75" cy="108.25" r="9" />
+            <text class="pin-label" fill="#5c4a37" font-family="'Trebuchet MS','Segoe UI',sans-serif" font-size="16" font-weight="700" x="280.75" y="136" text-anchor="middle">Tallulah Gorge</text>
+          </a>
+
+          <a href="/sami/saturday-farmers-market/" class="pin-link">
+            <circle class="pin-dot" fill="#d9503f" stroke="#ffffff" stroke-width="2.5" cx="99.25" cy="151.64" r="9" />
+            <text class="pin-label" fill="#5c4a37" font-family="'Trebuchet MS','Segoe UI',sans-serif" font-size="16" font-weight="700" x="114" y="157" text-anchor="start">Farmers Market</text>
+          </a>
+
+          <a href="/sami/driftwood-beach/" class="pin-link">
+            <circle class="pin-dot" fill="#d9503f" stroke="#ffffff" stroke-width="2.5" cx="512.43" cy="537.51" r="9" />
+            <text class="pin-label" fill="#5c4a37" font-family="'Trebuchet MS','Segoe UI',sans-serif" font-size="16" font-weight="700" x="497" y="522" text-anchor="end">Driftwood Beach</text>
+          </a>
+        </svg>
+      </div>
+    </div>
+
+    <div class="stops">
+      <div class="stop-card">
+        <div class="pin">🏖️</div>
+        <h3>Driftwood Beach</h3>
+        <p>Jekyll Island, GA — bleached driftwood, gulls overhead, a golden-hour ending on a sun-warmed log.</p>
+        <a href="/sami/driftwood-beach/" class="recipe-link">Read the adventure &rarr;</a>
+      </div>
+      <div class="stop-card">
+        <div class="pin">🏞️</div>
+        <h3>Tallulah Gorge</h3>
+        <p>Tallulah Falls, GA — a thousand-foot canyon, three waterfalls, and a suspension bridge with a view.</p>
+        <a href="/sami/tallulah-gorge/" class="recipe-link">Read the adventure &rarr;</a>
+      </div>
+      <div class="stop-card">
+        <div class="pin">🐐</div>
+        <h3>Saturday Farmers Market</h3>
+        <p>North Georgia — a fiddle player, a tote-bag tumble, and one very opinionated goat.</p>
+        <a href="/sami/saturday-farmers-market/" class="recipe-link">Read the adventure &rarr;</a>
+      </div>
+    </div>
+
+    <p class="more-soon">More of Sami's adventures are on the way — check back for new pins.</p>
+
+  </main>
+</SamiLayout>

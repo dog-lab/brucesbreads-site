@@ -6,16 +6,20 @@ const ingredientRow = z.object({
   weight: z.string(),
   percent: z.string().optional(),
   isTotal: z.boolean().optional(),
+  // Per-inclusion handling note (chill until folding in, pat dry, etc.) --
+  // rendered as a fourth "Notes" table column. Only meaningful for
+  // inclusions; dough rows leave this unset.
+  notes: z.string().optional(),
 });
 
-const timeline = z.object({
-  feed: z.string(),
-  mix: z.string(),
-  bulk: z.string(),
-  shape: z.string(),
-  proof: z.string(),
-  bake: z.string(),
-  cool: z.string(),
+// "Notes on Nonstandard Ingredients" -- a per-ingredient callout list that
+// sits right after Inclusions in the Recipe Card (the two belong together:
+// the table says *how much*, this says *why it behaves the way it does*).
+// A couple of recipes (John Dough) have nothing nonstandard at all, so
+// nonstandardIngredientsNote is a plain-paragraph escape hatch for that case.
+const nonstandardIngredient = z.object({
+  ingredient: z.string(),
+  note: z.string(),
 });
 
 const nutritionFact = z.object({
@@ -40,6 +44,20 @@ const playlistPhase = z.object({
   tracks: z.array(playlistTrack),
 });
 
+// "If You Like This Bake..." Books & Movies section -- grouped the same
+// way the playlist is (a group heading like "For the craft" or "For the
+// world tour" plus a list of titles), since that idiom already fits the
+// recipe generator spec's grouping convention.
+const bookMovieItem = z.object({
+  title: z.string(),
+  note: z.string(),
+});
+
+const bookMovieGroup = z.object({
+  groupTitle: z.string(),
+  items: z.array(bookMovieItem),
+});
+
 const recipes = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/recipes' }),
   schema: z.object({
@@ -47,17 +65,55 @@ const recipes = defineCollection({
     subtitle: z.string(),
     heroImage: z.string(),
     section: z.enum(['savory', 'sweet', 'discards']),
+    // Matches the printable-extras PDF filenames in public/cards/, e.g.
+    // "Banana-rama" -> Banana-rama_Recipe_Card.pdf. Deliberately its own
+    // field rather than derived from the slug -- a couple of recipes'
+    // card files use a different prefix than their slug (Seed Spitters'
+    // cards are Seed_Spitters_Seeded_Sourdough_*, not Seed_Spitters_*).
+    cardFilePrefix: z.string(),
     dough: z.array(ingredientRow),
+    // Freeform paragraph right after the Dough table (hydration/salt
+    // reasoning, or "no inclusions this time" for a plain loaf). Optional
+    // since not every recipe carries one.
+    hydrationSaltNote: z.string().optional(),
     inclusions: z.array(ingredientRow).default([]),
     yieldNote: z.string(),
+    // Ingredient flat-lay photo -- rendered right after the Inclusions
+    // table/yield note, i.e. right next to the ingredients it's a photo
+    // of, rather than wherever it happened to fall in the Markdown body.
+    flatlayImage: z.string().optional(),
+    flatlayAlt: z.string().optional(),
     ddt: z.string(),
-    timeline: timeline,
-    steps: z.array(z.string()),
+    // Notes on Nonstandard Ingredients -- structured list (the common
+    // case) or a single plain-paragraph note for a recipe with nothing
+    // nonstandard to call out (John Dough). Rendered right after
+    // Inclusions, before Estimated Nutrition.
+    nonstandardIngredients: z.array(nonstandardIngredient).default([]),
+    nonstandardIngredientsNote: z.string().optional(),
     nutritionBasis: z.string(),
+    // The "not precise lab figures, actual values shift with X" caveat
+    // sentence that follows nutritionBasis on the website.
+    nutritionCaveat: z.string().optional(),
     nutritionFacts: z.array(nutritionFact),
     vitamins: z.array(vitaminEntry),
     nutritionNote: z.string().optional(),
+    // Equipment list -- rendered immediately after Estimated Nutrition,
+    // still inside the Recipe Card section.
+    equipment: z.array(z.string()),
+    // Baking Music Playlist (structured -- also feeds the Master Playlist
+    // document) and Books & Movies (structured, same grouped shape).
+    // Everything else -- any prep-ahead component, the full Step-by-Step
+    // Tutorial Script, Alternatives and Improvements, Troubleshooting/FAQ
+    // (as a raw HTML table -- see the recipe .md files), Ingredient
+    // History Story, and Bloopers -- is plain Markdown body content below
+    // the frontmatter, in that exact order, same pattern as the narrative
+    // sections already were. This deliberately avoids forcing free-form
+    // narrative prose (with inline <figure> images, numbered sub-steps,
+    // multiple mixing methods, pH callouts, etc.) into rigid schema
+    // fields, which would be brittle to maintain for content that varies
+    // a lot per recipe.
     playlist: z.array(playlistPhase),
+    booksMovies: z.array(bookMovieGroup),
     publishDate: z.date(),
   }),
 });
