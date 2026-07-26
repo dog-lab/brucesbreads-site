@@ -3,7 +3,7 @@ title: "Sami the Sourdough Sandwich Visits Tallulah Gorge"
 subtitle: "A very good proof, a thousand-foot canyon, and three waterfalls worth the stairs."
 location: "Tallulah Falls, GA"
 voiceMode: "Field Notes"
-heroImage: "/images/sami/tallulah-gorge.png"
+heroImage: "/images/sami/tallulah-gorge.jpg"
 heroAlt: "Sami the sourdough sandwich standing on the rim overlook at Tallulah Gorge State Park, with two waterfalls visible in the distance"
 closingLine: "Three falls, one gorge, and a sandwich who'd do it all again tomorrow."
 mapPin:

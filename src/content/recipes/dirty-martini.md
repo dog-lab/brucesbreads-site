@@ -1,14 +1,14 @@
 ---
 title: "Dirty Martini Sourdough"
 subtitle: "Briny olives, orange zest, and fresh thyme — a savory loaf built like the cocktail it's named for."
-heroImage: "/images/dirty-martini/hero-shot.png"
+heroImage: "/images/dirty-martini/hero-shot.jpg"
 section: "savory"
 publishDate: 2026-07-16
 cardFilePrefix: "Dirty_Martini"
 ddt: "75-78F (24-26C)"
 yieldNote: "Total dough weight 1,060 g -- enough for one large boule, or split evenly into two smaller loaves (530 g each)."
 hydrationSaltNote: "Water plus the reserved 20 g of olive brine works out to 70% hydration for the base dough. Salt holds at the standard 2%, since the brine's saltiness is folded in during bulk fermentation rather than mixed into the base dough."
-flatlayImage: "/images/dirty-martini/ingredient-flatlay.png"
+flatlayImage: "/images/dirty-martini/ingredient-flatlay.jpg"
 flatlayAlt: "Ingredient flat-lay: flours, olives, orange zest, and thyme before mixing"
 dough:
   - name: "Bread flour"
@@ -172,7 +172,7 @@ booksMovies:
 
 The night before (or roughly 6–8 hours before you plan to mix), feed your starter at its usual ratio and let it ripen at room temperature. You're looking for a starter that's visibly doubled, domed, and full of bubbles — the dome should still be slightly convex, not yet caving in on itself, which is the tell that it's past peak. If you have a pH meter, ripe starter typically reads somewhere in the roughly pH 3.8–4.5 range, though the visual and tactile cues (dome, jiggle, bubble structure) are the more reliable everyday check — exact numbers shift with your flour and feeding ratio.
 
-<figure><img src="/images/dirty-martini/starter-peak.png" alt="Sourdough starter at peak, bubbly and domed" /></figure>
+<figure><img src="/images/dirty-martini/starter-peak.jpg" alt="Sourdough starter at peak, bubbly and domed" /></figure>
 
 ### 2. Mixing
 
@@ -190,7 +190,7 @@ Add the ripe starter to the rested dough and work it in by hand using the pincer
 
 Hand mixing will only get the dough to light-to-medium gluten development, and that's fine — the stretch-and-folds during bulk fermentation finish the job.
 
-<figure><img src="/images/dirty-martini/dough-after-autolyse.png" alt="Shaggy dough after autolyse, before the starter is worked in" /></figure>
+<figure><img src="/images/dirty-martini/dough-after-autolyse.jpg" alt="Shaggy dough after autolyse, before the starter is worked in" /></figure>
 
 #### Ooni Halo Pro Spiral Mixer
 
@@ -206,7 +206,7 @@ For inclusions: the chopped olives and the orange zest are sturdy enough to go i
 
 Finish with a final mix at a moderate speed to bring the dough to medium gluten development — stop there rather than pushing for full development. Let the dough rest briefly before hand-folding in the thyme.
 
-<figure><img src="/images/dirty-martini/bulk-fold.png" alt="Hands mid-fold during bulk fermentation, dough smoothness increasing" /></figure>
+<figure><img src="/images/dirty-martini/bulk-fold.jpg" alt="Hands mid-fold during bulk fermentation, dough smoothness increasing" /></figure>
 
 ### 3. Bulk Fermentation
 
@@ -220,7 +220,7 @@ After the last fold, let the dough continue fermenting undisturbed. At a moderat
 
 Turn the dough out onto a lightly floured surface. Shape into a tight boule (or two, if you divided the dough), building surface tension by dragging the dough toward you in a circular motion until the outer skin feels taut. Place seam-side up in a floured banneton.
 
-<figure><img src="/images/dirty-martini/shaped-dough.png" alt="Shaped dough with visible surface tension, just before the banneton" /></figure>
+<figure><img src="/images/dirty-martini/shaped-dough.jpg" alt="Shaped dough with visible surface tension, just before the banneton" /></figure>
 
 ### 5. Proofing
 
@@ -234,13 +234,13 @@ Score the dough with a confident, decisive cut. Bake covered for 20 minutes, the
 
 <div class="callout">Dough going into the oven typically sits somewhere in the roughly pH 3.8–4.2 range — a touch lower than right after bulk fermentation, since fermentation keeps inching along through shaping and proofing.</div>
 
-<figure><img src="/images/dirty-martini/scored-dough.png" alt="Scored dough ready to bake, top-down view showing the score pattern" /></figure>
+<figure><img src="/images/dirty-martini/scored-dough.jpg" alt="Scored dough ready to bake, top-down view showing the score pattern" /></figure>
 
 ### 7. Cooling
 
 Turn the loaf out onto a wire rack and let it cool completely — at least 1–2 hours — before slicing. This feels like the hardest step, but cutting in early lets steam escape too soon and leaves the crumb gummy.
 
-<figure><img src="/images/dirty-martini/crumb-shot.png" alt="Cooled loaf sliced open, crumb detail" /></figure>
+<figure><img src="/images/dirty-martini/crumb-shot.jpg" alt="Cooled loaf sliced open, crumb detail" /></figure>
 
 ## Alternatives and Improvements
 
@@ -267,19 +267,19 @@ Turn the loaf out onto a wire rack and let it cool completely — at least 1–2
 
 Wheat's story starts in the Fertile Crescent, where wild grasses were domesticated into cultivated wheat roughly ten thousand years ago. From there it spread outward along early trade and migration routes into Europe, North Africa, and Asia, gradually diversifying into the many varieties we bake with today. Bread flour and whole wheat flour, milled from different parts of that grain, represent two sides of the same ancient crop — one refined down to mostly endosperm for a lighter crumb, the other keeping the bran and germ for more flavor and nutrition. Wheat's spread across continents, carried by traders, settlers, and empires, makes it one of the most quietly influential crops in human history — a plant that reshaped diets and economies wherever it took root.
 
-<figure><img src="/images/dirty-martini/wheat-origin.png" alt="Wheat field at golden hour" /></figure>
+<figure><img src="/images/dirty-martini/wheat-origin.jpg" alt="Wheat field at golden hour" /></figure>
 
 Olives trace back to the eastern Mediterranean and the Levant, where wild olive trees were domesticated several thousand years ago. Ancient Greek and Phoenician traders carried cultivated olive trees across the Mediterranean basin, and the fruit and its oil became deeply woven into the region's economy, cuisine, and even religious ritual — olive branches as symbols of peace, olive oil used in ceremony as much as in cooking. Curing olives, whether in brine, salt, or oil, was as much about necessity as flavor: raw olives are intensely bitter and essentially inedible straight off the tree, so curing methods developed early and varied by region, each producing a distinctly different olive. An interesting aside: some of the oldest known olive oil production evidence comes from archaeological sites in the eastern Mediterranean dating back thousands of years, underscoring just how long humans have been working out how to turn a bitter fruit into something worth eating.
 
-<figure><img src="/images/dirty-martini/olive-origin.png" alt="Mediterranean olive grove" /></figure>
+<figure><img src="/images/dirty-martini/olive-origin.jpg" alt="Mediterranean olive grove" /></figure>
 
 Oranges have a longer and more circuitous journey. The sweet orange is generally believed to have originated in southern China and Southeast Asia, where citrus cultivation has ancient roots, before spreading westward along trade routes through South Asia and the Middle East. Arab traders and later European explorers helped move citrus fruit into the Mediterranean and eventually the Americas, where it became a defining crop of places like Florida and California. Orange zest — the fragrant, oil-rich outer peel — is the part of the fruit most closely tied to its aromatic reputation, since much of citrus's characteristic scent lives in those oils rather than in the juice itself.
 
-<figure><img src="/images/dirty-martini/orange-origin.png" alt="Orange grove with citrus close-up" /></figure>
+<figure><img src="/images/dirty-martini/orange-origin.jpg" alt="Orange grove with citrus close-up" /></figure>
 
 Thyme, like the olive, has deep Mediterranean roots, and ancient Greek and Egyptian cultures both made use of it — the Greeks associated it with courage and burned it as incense, while Egyptian use extended into practical and ceremonial applications tied to the plant's strong aromatic oils. It spread through Europe over the following centuries as a garden and culinary herb, prized for holding its flavor well even when dried, which made it a practical staple long before refrigeration or modern preservation existed.
 
-<figure><img src="/images/dirty-martini/thyme-origin.png" alt="Thyme plant close-up" /></figure>
+<figure><img src="/images/dirty-martini/thyme-origin.jpg" alt="Thyme plant close-up" /></figure>
 
 Put together, this loaf is something of a world tour disguised as a single bread: wheat from the Fertile Crescent, olives and thyme from the Mediterranean, and oranges that trace all the way back to Southeast Asia before finding a second home along the same Mediterranean coastline as the olives and herbs they're baked alongside here.
 
@@ -287,14 +287,14 @@ Put together, this loaf is something of a world tour disguised as a single bread
 
 **The olive-brine swamp.** Adding too much brine straight from the jar without cutting back the plain water elsewhere left one test loaf slack, sticky, and nearly impossible to shape. Fix: stick to the 20g of brine specified and don't eyeball a "generous splash" on top of it.
 
-<figure><img src="/images/dirty-martini/blooper-brine.png" alt="Overly wet, slack dough spreading rather than holding shape" /></figure>
+<figure><img src="/images/dirty-martini/blooper-brine.jpg" alt="Overly wet, slack dough spreading rather than holding shape" /></figure>
 
 **The scorched-zest crust.** A loaf scored right through a pocket of surface-level zest came out of the oven with a bitter, almost burnt streak along the cut. Fix: keep zest folded well into the interior, away from where the blade will pass.
 
-<figure><img src="/images/dirty-martini/blooper-zest.png" alt="Loaf crust with a dark, bitter-looking scorch mark along the score line" /></figure>
+<figure><img src="/images/dirty-martini/blooper-zest.jpg" alt="Loaf crust with a dark, bitter-looking scorch mark along the score line" /></figure>
 
 **The flat, sad disc.** Left to bulk ferment on the counter through an unexpectedly warm afternoon, one loaf blew past peak fermentation and baked up wide and flat instead of tall and domed — still edible, just more focaccia-adjacent than intended. Fix: when the kitchen runs warm, check the dough early and often rather than trusting the usual time range.
 
-<figure><img src="/images/dirty-martini/blooper-flat.png" alt="Flat, wide loaf with minimal oven spring next to a properly domed loaf for comparison" /></figure>
+<figure><img src="/images/dirty-martini/blooper-flat.jpg" alt="Flat, wide loaf with minimal oven spring next to a properly domed loaf for comparison" /></figure>
 
 Every one of these ended up edible, and every baker who's made more than a couple of loaves has a version of at least one of them. Mistakes like these are just part of learning how a dough behaves — they're not a sign to give up, they're the fastest way to actually understand what's happening in the bowl.

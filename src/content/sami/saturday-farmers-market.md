@@ -3,7 +3,7 @@ title: "Sami the Sourdough Sandwich Visits the Saturday Farmers Market"
 subtitle: "One tote bag, one gust of wind, and one very opinionated goat."
 location: "North Georgia"
 voiceMode: "Mischief"
-heroImage: "/images/sami/farmers-market-entrance.png"
+heroImage: "/images/sami/farmers-market-entrance.jpg"
 heroAlt: "Sami the sourdough sandwich peeking out of a tote bag at the entrance to a bustling farmers market, with a goat, fiddle player, and scooter kid in the background"
 closingLine: "Not every sandwich survives a farmers market. Sami did — barely, gloriously, and with a tomato seed stuck to his crust the whole way home."
 mapPin:
@@ -24,7 +24,7 @@ Too late. A gust of wind — market winds are a menace, everyone knows this — 
 A very small child pointed. "Sandwich!"
 
 <figure>
-  <img src="/images/sami/farmers-market-tomato-table.png" alt="Sami the sourdough sandwich mid-tumble over a farm stand table piled with heirloom tomatoes, a delighted child pointing up at him" />
+  <img src="/images/sami/farmers-market-tomato-table.jpg" alt="Sami the sourdough sandwich mid-tumble over a farm stand table piled with heirloom tomatoes, a delighted child pointing up at him" />
   <figcaption>Sami, making a memorable entrance at the tomato table.</figcaption>
 </figure>
 
@@ -33,7 +33,7 @@ A very small child pointed. "Sandwich!"
 What followed was, by Sami's own later account, four of the most harrowing minutes of his life: rescued by a stranger's polite cough, nearly adopted by the opinionated goat (who lunged with real conviction), and finally scooped up — slightly bruised at one corner, one piece of lettuce hanging on for dear life — by the very voice that had promised him a quiet morning.
 
 <figure>
-  <img src="/images/sami/farmers-market-goat-lunge.png" alt="Sami the sourdough sandwich being rescued as a determined goat on a rope lunges toward him near an overturned crate of tomatoes" />
+  <img src="/images/sami/farmers-market-goat-lunge.jpg" alt="Sami the sourdough sandwich being rescued as a determined goat on a rope lunges toward him near an overturned crate of tomatoes" />
   <figcaption>The goat, unconvinced this wasn't a snack.</figcaption>
 </figure>
 

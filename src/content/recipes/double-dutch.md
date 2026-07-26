@@ -1,14 +1,14 @@
 ---
 title: "Double Dutch: Kalamata Olive & Gouda Sourdough"
 subtitle: "Bread Flour & Whole Wheat, studded with Kalamata Olives and Aged Gouda"
-heroImage: "/images/double-dutch/double_dutch_01_hero.png"
+heroImage: "/images/double-dutch/double_dutch_01_hero.jpg"
 section: "savory"
 publishDate: 2026-07-14
 cardFilePrefix: "Double_Dutch_Kalamata_Gouda"
 ddt: "75-78F (24-26C)"
 yieldNote: "Total finished dough weight: ~1,188 g, yielding one substantial boule."
 hydrationSaltNote: "This loaf runs a bit lower on hydration (68% vs. the 75%+ you'll see in seeded loaves) because olives and cheese both bring their own moisture and fat to the party -- a wetter base dough gets sloppy fast once they're folded in. Salt is also trimmed down from the usual ~2%, since kalamata olives are brined and salty enough to make up the difference on their own."
-flatlayImage: "/images/double-dutch/double_dutch_02_flatlay.png"
+flatlayImage: "/images/double-dutch/double_dutch_02_flatlay.jpg"
 flatlayAlt: "Ingredient flat-lay before mixing"
 dough:
   - name: "Bread flour"
@@ -170,7 +170,7 @@ booksMovies:
 
 The night before (or ~8–12 hours before mixing, depending on your kitchen's warmth), feed your starter so it peaks around the time you plan to mix. Look for it to double in size, develop a domed top just starting to flatten at the edges, and smell pleasantly tangy.
 
-<figure><img src="/images/double-dutch/double_dutch_03_starter.png" alt="Starter at peak" /></figure>
+<figure><img src="/images/double-dutch/double_dutch_03_starter.jpg" alt="Starter at peak" /></figure>
 
 <div class="callout"><strong>pH check (optional):</strong> a ripe starter typically falls somewhere in the roughly 3.8–4.5 range — a representative range, not a precise target. The dome-and-jiggle visual test is your primary signal.</div>
 
@@ -182,7 +182,7 @@ Salt always goes in **after** the starter, regardless of method.
 
 1. Combine the bread flour, whole wheat flour, and the 340 g main dough water in a large bowl. Mix until no dry flour remains. This is your autolyse — rest it, covered, for at least 30 minutes and up to 90–120 minutes if your schedule allows.
 
-   <figure><img src="/images/double-dutch/double_dutch_04_autolyse.png" alt="Dough after autolyse, before mixing in starter" /></figure>
+   <figure><img src="/images/double-dutch/double_dutch_04_autolyse.jpg" alt="Dough after autolyse, before mixing in starter" /></figure>
 
 2. Add the ripe starter and work it in fully using the pincer or slap-and-fold method until incorporated.
 3. Add the salt and continue folding until no dry bits remain and the dough starts to smooth out — typically 3–5 minutes of active work total.
@@ -206,7 +206,7 @@ If you haven't already folded in the olives (and the Gouda, which always goes in
 
 **Timing:** at a moderate room temperature (~21–23°C / 70–73°F), expect bulk fermentation to take roughly 4–6 hours total. In a warmer kitchen, it'll move faster — watch the dough, not the clock. In a cooler kitchen, expect it to take longer. Look for the dough to have grown by roughly 50–75% in volume and feel jiggly and airy when you nudge the bowl.
 
-<figure><img src="/images/double-dutch/double_dutch_05_bulkfold.png" alt="Mid-bulk-fermentation stretch and fold, olives and cheese visible" /></figure>
+<figure><img src="/images/double-dutch/double_dutch_05_bulkfold.jpg" alt="Mid-bulk-fermentation stretch and fold, olives and cheese visible" /></figure>
 
 <div class="callout"><strong>pH check (optional):</strong> dough right after bulk fermentation typically sits in roughly the 3.9–4.3 range.</div>
 
@@ -214,7 +214,7 @@ If you haven't already folded in the olives (and the Gouda, which always goes in
 
 Turn the dough out, pre-shape into a loose round, bench-rest 15–20 minutes, then final-shape into a tight boule. Be a little gentler than usual here — the cheese cubes create weak spots that can tear if you handle the dough too aggressively. Place seam-side up in a floured banneton.
 
-<figure><img src="/images/double-dutch/double_dutch_06_shaped.png" alt="Shaped dough with surface tension" /></figure>
+<figure><img src="/images/double-dutch/double_dutch_06_shaped.jpg" alt="Shaped dough with surface tension" /></figure>
 
 ### 5. Proof
 
@@ -224,7 +224,7 @@ Proof at room temperature for roughly 2–4 hours, or retard in the refrigerator
 
 Turn the dough out onto parchment, score with a confident single cut.
 
-<figure><img src="/images/double-dutch/double_dutch_07_scored.png" alt="Scored dough, ready to bake" /></figure>
+<figure><img src="/images/double-dutch/double_dutch_07_scored.jpg" alt="Scored dough, ready to bake" /></figure>
 
 **Dutch oven preheat:** heat your Dutch oven, empty, to **450–475°F / 230–245°C** — not the pot's rated maximum. Check your specific Dutch oven and lid knob's rated maximum before going higher than this range.
 
@@ -238,7 +238,7 @@ Turn the dough out onto parchment, score with a confident single cut.
 
 Cool on a wire rack for at least 1–2 hours before slicing. This matters even more than usual here — the melted cheese pockets need time to firm back up, or your slices will tear right through them.
 
-<figure><img src="/images/double-dutch/double_dutch_08_crumb.png" alt="Crumb, fully cooled and sliced" /></figure>
+<figure><img src="/images/double-dutch/double_dutch_08_crumb.jpg" alt="Crumb, fully cooled and sliced" /></figure>
 
 ## Alternatives and Improvements
 
@@ -263,13 +263,13 @@ Cool on a wire rack for at least 1–2 hours before slicing. This matters even m
 
 Kalamata olives take their name from the city of Kalamata, on the Messinian Gulf in the Peloponnese region of southern Greece, where olive cultivation stretches back thousands of years as one of the foundational crops of Mediterranean agriculture.
 
-<figure><img src="/images/double-dutch/double_dutch_09_olive_origin.png" alt="Olive grove near Kalamata, Greece" /></figure>
+<figure><img src="/images/double-dutch/double_dutch_09_olive_origin.jpg" alt="Olive grove near Kalamata, Greece" /></figure>
 
 Kalamata olives specifically are large, almond-shaped, and cured in a way that gives them their deep purple color and rich, fruity flavor — distinct enough that "Kalamata" now carries protected geographical status in the European Union, meaning only olives grown in that specific region can legally carry the name.
 
 Gouda cheese, meanwhile, is named for the Dutch city of Gouda in South Holland, which has served as a cheese trading hub since the Middle Ages rather than necessarily being where all "Gouda" cheese is actually produced — much like the city lent its name to a style more than a single point of origin.
 
-<figure><img src="/images/double-dutch/double_dutch_10_gouda_origin.png" alt="Historic cheese market scene evoking Gouda, Netherlands" /></figure>
+<figure><img src="/images/double-dutch/double_dutch_10_gouda_origin.jpg" alt="Historic cheese market scene evoking Gouda, Netherlands" /></figure>
 
 The city's weekly cheese market, with its traditional weighing house and rows of wheels stacked in the square, became a cultural symbol of Dutch dairy trade for centuries. Aging is what separates young Gouda — mild, soft, and springy — from the aged Gouda used in this recipe, which develops a firmer, almost caramel-like character over months or years, along with the small crunchy protein crystals aged-cheese lovers seek out.
 
@@ -283,14 +283,14 @@ Even a well-tested recipe goes sideways sometimes — here's what that can look 
 
 **The cheese moat.** A ring of melted Gouda pools and crisps up around the base of the loaf instead of staying tucked inside — dramatic-looking, and honestly not the worst outcome, but a sign the cheese wasn't cold enough going in. The fix: keep those cubes in the fridge right up until the moment you fold them in.
 
-<figure><img src="/images/double-dutch/double_dutch_11_blooper_moat.png" alt="Melted cheese pooled around the base of the loaf" /></figure>
+<figure><img src="/images/double-dutch/double_dutch_11_blooper_moat.jpg" alt="Melted cheese pooled around the base of the loaf" /></figure>
 
 **The sunken bottom.** Slice into the loaf and all the olives and cheese have settled into a dense, wet layer at the bottom instead of spreading through the crumb. The fix: fold more thoroughly, and make sure the dough has built real strength during bulk fermentation before you ask it to hold onto that much weight.
 
-<figure><img src="/images/double-dutch/double_dutch_12_blooper_sunken.png" alt="Crumb cross-section showing inclusions settled at the bottom" /></figure>
+<figure><img src="/images/double-dutch/double_dutch_12_blooper_sunken.jpg" alt="Crumb cross-section showing inclusions settled at the bottom" /></figure>
 
 **The scorched top.** Between the uncovered bake stage and any cheese that escaped early, the top can go from golden to genuinely burnt faster than you'd expect. The fix: check a few minutes early on your first bake of this recipe, and tent with foil the moment it looks close.
 
-<figure><img src="/images/double-dutch/double_dutch_13_blooper_scorched.png" alt="Over-darkened, scorched loaf top" /></figure>
+<figure><img src="/images/double-dutch/double_dutch_13_blooper_scorched.jpg" alt="Over-darkened, scorched loaf top" /></figure>
 
 None of this means you did something wrong — it means you're actually baking. Every one of these is a normal, forgettable part of learning a new recipe, not a reason to give up on it.

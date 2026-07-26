@@ -1,7 +1,7 @@
 ---
 title: "Seed Spitters: A Seeded Sourdough World Tour"
 subtitle: "Bread Flour, Spelt & Einkorn, studded with Rolled Oats, Chia, Flax, and Sesame"
-heroImage: "/images/seed-spitters/01_hero_sliced_loaf.png"
+heroImage: "/images/seed-spitters/01_hero_sliced_loaf.jpg"
 section: "savory"
 publishDate: 2026-07-14
 cardFilePrefix: "Seed_Spitters_Seeded_Sourdough"
@@ -69,7 +69,7 @@ nonstandardIngredients:
     note: "especially the crust coating, toasts and darkens quickly; watch the bake in the final minutes."
 nutritionBasis: "Estimated, USDA-derived -- per slice, 1/12 loaf, ~79 g"
 nutritionCaveat: "Not precise lab figures; actual values shift with exact flour brands and bake time."
-flatlayImage: "/images/seed-spitters/02_ingredient_flatlay.png"
+flatlayImage: "/images/seed-spitters/02_ingredient_flatlay.jpg"
 flatlayAlt: "Ingredient flat-lay before mixing"
 nutritionFacts:
   - label: "Calories"
@@ -186,7 +186,7 @@ booksMovies:
 
 The night before (or ~8–12 hours before mixing, depending on your kitchen's warmth), feed your starter so it peaks around the time you plan to mix. You're looking for it to double in size, develop a domed top that's just starting to flatten at the edges, and smell pleasantly tangy — not sharply acetone-like.
 
-<figure><img src="/images/seed-spitters/03_starter_at_peak.png" alt="Starter at peak" /></figure>
+<figure><img src="/images/seed-spitters/03_starter_at_peak.jpg" alt="Starter at peak" /></figure>
 
 <div class="callout"><strong>pH check (optional):</strong> a ripe starter typically falls somewhere in the roughly 3.8–4.5 range. Exact numbers shift with flour type and feeding ratio — the dome-and-jiggle visual test is your primary signal; a pH meter is a nice-to-have secondary check, not a requirement.</div>
 
@@ -198,7 +198,7 @@ Autolyse is *not* a separate step ahead of mixing for either method below — it
 
 1. Combine the bread flour, spelt, einkorn, and the 375 g main dough water in a large bowl. Mix until no dry flour remains. This is your autolyse — rest it, covered, for at least 30 minutes and up to 90–120 minutes if your schedule allows (little extra benefit beyond that for this flour blend).
 
-   <figure><img src="/images/seed-spitters/04_dough_after_autolyse.png" alt="Dough after autolyse, before mixing in starter" /></figure>
+   <figure><img src="/images/seed-spitters/04_dough_after_autolyse.jpg" alt="Dough after autolyse, before mixing in starter" /></figure>
 
 2. Add the ripe starter and work it in fully using the pincer or slap-and-fold method until incorporated.
 3. Add the salt and continue folding until no dry bits remain and the dough starts to smooth out — typically 3–5 minutes of active work total. Adding salt after the starter (not alongside it) keeps the dough easier to manage through these first few minutes.
@@ -223,7 +223,7 @@ Fold in the soaked oats, chia, flax, and the 20 g of sesame destined for the int
 
 **Timing:** at a moderate room temperature (~21–23°C / 70–73°F), expect bulk fermentation to take roughly 4–6 hours total. In a warmer kitchen, it'll move faster — watch the dough, not the clock, and start checking earlier. In a cooler kitchen, expect it to take longer. Look for the dough to have grown by roughly 50–75% in volume, feel jiggly and airy when you nudge the bowl, and show visible bubbles at the surface and edges.
 
-<figure><img src="/images/seed-spitters/05_bulk_fermentation_fold.png" alt="Mid-bulk-fermentation stretch and fold" /></figure>
+<figure><img src="/images/seed-spitters/05_bulk_fermentation_fold.jpg" alt="Mid-bulk-fermentation stretch and fold" /></figure>
 
 <div class="callout"><strong>pH check (optional):</strong> dough right after bulk fermentation typically sits in roughly the 3.9–4.3 range — again, a representative range rather than a precise target; a confident poke-test spring-back is your primary cue.</div>
 
@@ -231,7 +231,7 @@ Fold in the soaked oats, chia, flax, and the 20 g of sesame destined for the int
 
 Turn the dough out, pre-shape into a loose round, bench-rest 15–20 minutes, then final-shape into a tight boule, building surface tension. Roll the exterior in the reserved 10 g sesame seeds if desired, then place seam-side up in a floured banneton.
 
-<figure><img src="/images/seed-spitters/06_shaped_dough.png" alt="Shaped dough with surface tension" /></figure>
+<figure><img src="/images/seed-spitters/06_shaped_dough.jpg" alt="Shaped dough with surface tension" /></figure>
 
 ### 5. Proof
 
@@ -241,7 +241,7 @@ Proof at room temperature for roughly 2–4 hours, or retard in the refrigerator
 
 Turn the dough out onto parchment, score with a confident single cut.
 
-<figure><img src="/images/seed-spitters/07_scored_dough.png" alt="Scored dough, ready to bake" /></figure>
+<figure><img src="/images/seed-spitters/07_scored_dough.jpg" alt="Scored dough, ready to bake" /></figure>
 
 **Dutch oven preheat:** heat your Dutch oven, empty, to **450–475°F / 230–245°C** — not the pot's rated maximum. Most enameled cast iron caps out around 480–500°F, often limited by a phenolic knob rather than the pot itself, and home ovens (gas and electric alike) cycle and routinely overshoot their set temperature during preheating. Check your specific Dutch oven and lid knob's rated maximum before going higher than this range.
 
@@ -255,7 +255,7 @@ Turn the dough out onto parchment, score with a confident single cut.
 
 Cool on a wire rack for at least 1–2 hours before slicing — the crumb is still setting internally, and cutting too early makes it gummy.
 
-<figure><img src="/images/seed-spitters/08_crumb_reveal.png" alt="Crumb, fully cooled and sliced" /></figure>
+<figure><img src="/images/seed-spitters/08_crumb_reveal.jpg" alt="Crumb, fully cooled and sliced" /></figure>
 
 ## Alternatives and Improvements
 
@@ -280,21 +280,21 @@ Cool on a wire rack for at least 1–2 hours before slicing — the crumb is sti
 
 Bread flour's high-protein wheat lineage traces back to the same Fertile Crescent domestication that gave rise to nearly all modern bread wheat, refined over centuries of milling toward the strong, reliable structure home bakers now take for granted.
 
-<figure><img src="/images/seed-spitters/origin_01_einkorn_anatolia.png" alt="Einkorn's ancestral wheat fields in Anatolia" /></figure>
+<figure><img src="/images/seed-spitters/origin_01_einkorn_anatolia.jpg" alt="Einkorn's ancestral wheat fields in Anatolia" /></figure>
 
 Spelt, by contrast, is one of wheat's oldest surviving relatives, cultivated across Central Europe for millennia and still closely associated with the foothills of the Alps, where it thrived in poorer soils that modern wheat struggled with.
 
-<figure><img src="/images/seed-spitters/origin_02_spelt_alps.png" alt="Spelt fields in the Alpine foothills" /></figure>
+<figure><img src="/images/seed-spitters/origin_02_spelt_alps.jpg" alt="Spelt fields in the Alpine foothills" /></figure>
 
 Einkorn is older still — often cited as among the very first domesticated wheats, its cultivation tracing back to early farming communities in what's now southeastern Turkey, in the region historically known as Anatolia. Its low yield compared to modern wheat pushed it out of mainstream agriculture centuries ago, but its distinct, sweet, nutty flavor has kept it alive in small pockets of traditional baking.
 
 Rolled oats carry a Northern European story — oats thrive in cooler, wetter climates where wheat struggles, which is part of why oat cultivation became especially associated with Scotland and Scandinavia, where they became a staple grain for both people and livestock long before they were rolled into the flaked form we use today.
 
-<figure><img src="/images/seed-spitters/origin_04_oats_scotland.png" alt="Oat fields in the Scottish countryside" /></figure>
+<figure><img src="/images/seed-spitters/origin_04_oats_scotland.jpg" alt="Oat fields in the Scottish countryside" /></figure>
 
 Chia seeds come from a flowering plant native to central Mexico and Guatemala, where they were a staple crop for the Aztec and Maya, valued enough to be used as currency and offered in religious ceremonies.
 
-<figure><img src="/images/seed-spitters/origin_03_chia_mexico.png" alt="Chia plant close-up" /></figure>
+<figure><img src="/images/seed-spitters/origin_03_chia_mexico.jpg" alt="Chia plant close-up" /></figure>
 
 Flax has one of the longest cultivation histories of any crop, with evidence of its use stretching back to the ancient Near East and Egypt, where it was prized both for its seeds and for the linen fiber woven from its stalks. Sesame's cultivation stretches back thousands of years across Africa and the Indian subcontinent, and it's often cited as one of the oldest oilseed crops known to agriculture, prized in both regions for its rich, toasty flavor and high oil content.
 
@@ -310,14 +310,14 @@ Even a well-tested recipe goes sideways sometimes — here's what that can look 
 
 **The pancake loaf.** Under-proofed dough, baked in a hurry on a cold day, comes out wide, flat, and dense instead of domed. The fix: trust the poke-test over the clock, especially in a cooler kitchen — under-proofed dough springs back immediately and fully.
 
-<figure><img src="/images/seed-spitters/blooper_01_flat_loaf.png" alt="Flat, under-proofed loaf" /></figure>
+<figure><img src="/images/seed-spitters/blooper_01_flat_loaf.jpg" alt="Flat, under-proofed loaf" /></figure>
 
 **The scorched sesame top.** That crust coating of sesame seeds looks gorgeous right up until the uncovered bake stage runs a few minutes too long, and suddenly it's charred instead of toasted. The fix: tent loosely with foil for the last 5–8 minutes if the top is coloring faster than the rest of the loaf.
 
-<figure><img src="/images/seed-spitters/blooper_02_scorched_crust.png" alt="Over-darkened, scorched crust" /></figure>
+<figure><img src="/images/seed-spitters/blooper_02_scorched_crust.jpg" alt="Over-darkened, scorched crust" /></figure>
 
 **The starter that escaped its jar.** A too-small jar plus a warm kitchen plus a forgotten feeding schedule equals a bubbly beige overflow down the counter. The fix: size up your jar once your starter's established, and keep it somewhere you'll actually see it twice a day.
 
-<figure><img src="/images/seed-spitters/blooper_03_starter_overflow.png" alt="Starter overflowed its jar" /></figure>
+<figure><img src="/images/seed-spitters/blooper_03_starter_overflow.jpg" alt="Starter overflowed its jar" /></figure>
 
 None of this means you did something wrong — it means you're actually baking. Every one of these is a normal, forgettable part of learning the rhythm of a new recipe, not a reason to stop.

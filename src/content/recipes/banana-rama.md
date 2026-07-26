@@ -1,14 +1,14 @@
 ---
 title: "Banana-rama Sourdough"
 subtitle: "Bread Flour & Whole Wheat, loaded with Roasted Banana Peppers, Sharp Provolone, and Caramelized Onions"
-heroImage: "/images/banana-rama/hero-sliced-loaf.png"
+heroImage: "/images/banana-rama/hero-sliced-loaf.jpg"
 section: "savory"
 publishDate: 2026-01-15
 cardFilePrefix: "Banana-rama"
 ddt: "75-78F (24-26C)"
 yieldNote: "Total finished dough weight: ~1,209 g, yielding one generously sized loaf."
 hydrationSaltNote: "Hydration sits a bit below a plain country loaf (72% vs. 78%) because roasted peppers, caramelized onions, and cheese all carry their own moisture once folded in -- a wetter base plus three juicy inclusions is a fast track to a dough you can't shape. Salt is trimmed slightly from the usual ~2% too, since sharp provolone and caramelized onions both bring their own saltiness and sweetness to the mix."
-flatlayImage: "/images/banana-rama/ingredient-flatlay.png"
+flatlayImage: "/images/banana-rama/ingredient-flatlay.jpg"
 flatlayAlt: "Ingredient flat-lay — flours, roasted peppers, provolone cubes, and caramelized onions arranged before mixing"
 dough:
   - name: "Bread flour"
@@ -181,13 +181,13 @@ Caramelized onions and roasted peppers are both done-ahead components, so plan t
 1. Slice yellow onions thin and even, about 1/8 inch, root to tip — yellow onions carry more natural sugar than sweet onions like Vidalia and hold their structure better over a long cook.
 2. Melt 2 tablespoons of butter, olive oil, or a mix of both in a wide, heavy pan over medium-low heat. Add the sliced onions along with a pinch of salt right away — the salt draws moisture out and jump-starts the process.
 
-   <figure><img src="/images/banana-rama/onion-caramelizing-progress.png" alt="Onions partway through caramelizing — some strands pale gold, some deeper amber" /></figure>
+   <figure><img src="/images/banana-rama/onion-caramelizing-progress.jpg" alt="Onions partway through caramelizing — some strands pale gold, some deeper amber" /></figure>
 
 3. Let them cook low and slow, stirring every 5 minutes or so, for 35–45 minutes minimum. This is the step people rush and shouldn't: true caramelization is a slow sugar conversion, not just browning, and higher heat gets you sautéed onions instead of the deep amber, jammy result you want.
 4. If the onions start sticking or scorching, deglaze with a small splash of water and keep going — don't turn the heat up to compensate.
 5. Once they're deep golden-brown and jammy, pull them off the heat and spread them out to cool completely. Cooling matters for two reasons: warm onions folded into the dough can slow starter activity, and residual moisture (warm or not) will throw off your hydration if it isn't accounted for.
 
-   <figure><img src="/images/banana-rama/onion-caramelized-finished.png" alt="Finished caramelized onions — deep golden-brown, glossy, jammy strands" /></figure>
+   <figure><img src="/images/banana-rama/onion-caramelized-finished.jpg" alt="Finished caramelized onions — deep golden-brown, glossy, jammy strands" /></figure>
 
 6. Once cool, blot the onions with a paper towel to pull off any extra moisture before folding them into the dough. Wet onions can gum up gluten development at the fold stage and leave you with a slack, hard-to-shape dough.
 
@@ -197,7 +197,7 @@ Caramelized onions and roasted peppers are both done-ahead components, so plan t
 
 The night before (or ~8–12 hours before mixing, depending on your kitchen's warmth), feed your starter so it peaks around the time you plan to mix. Look for it to double in size, develop a domed top that's just starting to flatten at the edges, and smell pleasantly tangy.
 
-<figure><img src="/images/banana-rama/starter-at-peak.png" alt="Starter at peak — bubbly, doubled, dome slightly convex before flattening" /></figure>
+<figure><img src="/images/banana-rama/starter-at-peak.jpg" alt="Starter at peak — bubbly, doubled, dome slightly convex before flattening" /></figure>
 
 <div class="callout"><strong>pH check (optional):</strong> a ripe starter typically falls somewhere in the roughly 3.8–4.5 range — a representative range, not a precise target, since exact numbers shift with flour type and feeding ratio. The dome-and-jiggle visual test is your primary signal; a meter is a nice-to-have secondary check.</div>
 
@@ -211,7 +211,7 @@ Salt always goes in after the starter, regardless of method. None of this loaf's
 
 1. Combine the bread flour, whole wheat flour, and the 360 g water in a large bowl. Mix until no dry flour remains. This is your autolyse, as its own distinct step ahead of mixing — rest it, covered, for at least 30 minutes and up to 90–120 minutes if your schedule allows; beyond that range there's little extra benefit for this flour blend.
 
-   <figure><img src="/images/banana-rama/dough-after-autolyse.png" alt="Dough after autolyse, before mixing in starter — shaggy, rough texture" /></figure>
+   <figure><img src="/images/banana-rama/dough-after-autolyse.jpg" alt="Dough after autolyse, before mixing in starter — shaggy, rough texture" /></figure>
 
 2. Add the ripe starter and work it in fully using the pincer or slap-and-fold method until incorporated. Then add the salt and continue folding until no dry bits remain and the dough starts to smooth out — typically 3–5 minutes of active work total. Adding salt after the starter, not alongside it, keeps the dough easier to manage through these first few minutes.
 3. Expect only light-to-medium gluten development at this point — that's normal. The stretch-and-folds during bulk fermentation finish the job.
@@ -233,7 +233,7 @@ Once the dough has had its first stretch-and-fold or two and started to build so
 
 **Timing:** at a moderate room temperature (~21–23°C / 70–73°F) and a dough that hit its DDT target, expect bulk fermentation to take roughly 4–6 hours total, with the dough growing by roughly 50–75% in volume — that rise target is calibrated to this recipe's 75–78°F DDT specifically; a notably cooler dough would need to climb higher than that range to reach the same finished fermentation level, while a warmer dough should be cut off sooner. In a warmer kitchen, fermentation will move faster overall — watch the dough, not the clock, and start checking earlier. In a cooler kitchen, expect it to take longer. Look for the dough to feel jiggly and airy when you nudge the bowl.
 
-<figure><img src="/images/banana-rama/bulk-ferment-fold.png" alt="Mid-bulk-fermentation stretch and fold, cheese cubes, peppers, and onion strands visible in the dough" /></figure>
+<figure><img src="/images/banana-rama/bulk-ferment-fold.jpg" alt="Mid-bulk-fermentation stretch and fold, cheese cubes, peppers, and onion strands visible in the dough" /></figure>
 
 <div class="callout"><strong>pH check (optional):</strong> dough right after bulk fermentation typically sits in roughly the 3.9–4.3 range — a representative range, not a precise cutoff; a confident poke-test spring-back is your primary cue.</div>
 
@@ -241,7 +241,7 @@ Once the dough has had its first stretch-and-fold or two and started to build so
 
 Turn the dough out and pre-shape into a loose round, then bench-rest 15–20 minutes. For final shaping, shape into a standard boule or batard, being a little gentler than you would with a plain dough — the cheese cubes create soft spots, and the peppers and onions add some slip that can tear if handled roughly. Settle the shaped dough into a floured banneton, seam-side down.
 
-<figure><img src="/images/banana-rama/shaped-dough-banneton.png" alt="Shaped, raw dough with surface tension, seam-side down in the banneton, just before proofing" /></figure>
+<figure><img src="/images/banana-rama/shaped-dough-banneton.jpg" alt="Shaped, raw dough with surface tension, seam-side down in the banneton, just before proofing" /></figure>
 
 ### 5. Proof
 
@@ -251,7 +251,7 @@ Proof at room temperature for roughly 2–4 hours, or retard in the refrigerator
 
 Turn the dough out onto parchment and score with a confident single cut.
 
-<figure><img src="/images/banana-rama/scored-dough-ready.png" alt="Scored dough, ready to bake — top-down, showing the score pattern" /></figure>
+<figure><img src="/images/banana-rama/scored-dough-ready.jpg" alt="Scored dough, ready to bake — top-down, showing the score pattern" /></figure>
 
 **Dutch oven preheat:** heat your Dutch oven, empty, to 450–475°F / 230–245°C — not the pot's rated maximum. Most enameled cast iron caps out around 480–500°F, often limited by a phenolic knob rather than the pot itself, and home ovens (gas and electric alike) cycle and routinely overshoot their set temperature during preheating. Check your specific Dutch oven and lid knob's rated maximum before going higher than this range.
 
@@ -265,7 +265,7 @@ Turn the dough out onto parchment and score with a confident single cut.
 
 Cool on a wire rack for at least 1–2 hours before slicing. This matters even more than usual here — the melted cheese pockets need time to firm back up, or your slices will drag and tear instead of cutting cleanly.
 
-<figure><img src="/images/banana-rama/crumb-reveal.png" alt="Crumb, fully cooled and sliced, cheese pockets, peppers, and onions visible in cross-section" /></figure>
+<figure><img src="/images/banana-rama/crumb-reveal.jpg" alt="Crumb, fully cooled and sliced, cheese pockets, peppers, and onions visible in cross-section" /></figure>
 
 ## Alternatives and Improvements
 
@@ -293,15 +293,15 @@ Cool on a wire rack for at least 1–2 hours before slicing. This matters even m
 
 Banana peppers belong to the same species, *Capsicum annuum*, as bell peppers and jalapeños — a lineage that traces back to the domestication of chili peppers in Mesoamerica thousands of years ago. The banana pepper itself, as a distinct mild, tapered cultivar, is closely tied to 20th-century American agriculture and became a fixture of pizzerias, delis, and sub shops, especially across the Midwest and East Coast — the pepper jar sitting on a sandwich counter is a genuinely American twist on a much older Central American plant.
 
-<figure><img src="/images/banana-rama/banana-pepper-deli-history.png" alt="Classic American deli counter with jars of pickled banana peppers on display" /></figure>
+<figure><img src="/images/banana-rama/banana-pepper-deli-history.jpg" alt="Classic American deli counter with jars of pickled banana peppers on display" /></figure>
 
 Provolone traces its roots to Southern Italy, particularly the Campania region, where it belongs to the *pasta filata* (stretched-curd) family of cheeses alongside mozzarella. Its name is thought to come from the Neapolitan dialect word "prova," meaning "test" or "trial" — a nod to the quality checks historically performed on the curd. Aged versions like Provolone Piccante develop the sharper, more pronounced bite this recipe calls for.
 
-<figure><img src="/images/banana-rama/provolone-italy-history.png" alt="Traditional provolone cheese-making workshop in Campania, Southern Italy" /></figure>
+<figure><img src="/images/banana-rama/provolone-italy-history.jpg" alt="Traditional provolone cheese-making workshop in Campania, Southern Italy" /></figure>
 
 Onions are among the oldest cultivated foods in human history, grown across the Middle East and Central Asia for more than 5,000 years. The specific technique of caramelizing them — slowly coaxing out their natural sugars over low heat — shows up across many culinary traditions independently, though it's perhaps most famously associated with French cooking and dishes like French onion soup.
 
-<figure><img src="/images/banana-rama/onion-history-field.png" alt="Onion field at golden hour, evoking the crop's ancient Middle Eastern and Central Asian origins" /></figure>
+<figure><img src="/images/banana-rama/onion-history-field.jpg" alt="Onion field at golden hour, evoking the crop's ancient Middle Eastern and Central Asian origins" /></figure>
 
 Put a slice of this loaf together, and it's a fairly American story at heart: an Italian cheese-making technique carried over by immigrant communities, a chili pepper native to the Americas but bred into its current form on American soil, and a slow-cooking technique for one of the world's oldest vegetables, all folded around the same wild-yeast fermentation that's fed people since ancient Egypt.
 
@@ -313,14 +313,14 @@ Even a well-tested recipe goes sideways sometimes — here's what that can look 
 
 **The cheese moat.** A ring of melted provolone pools and crisps up around the base of the loaf instead of staying tucked inside. The fix: keep those cubes in the fridge right up until the moment you fold them in.
 
-<figure><img src="/images/banana-rama/blooper-cheese-moat.png" alt="Melted cheese pooled and crisped around the base of the loaf" /></figure>
+<figure><img src="/images/banana-rama/blooper-cheese-moat.jpg" alt="Melted cheese pooled and crisped around the base of the loaf" /></figure>
 
 **The soggy dough.** The dough turns slack and hard to shape, spreading out instead of holding its form. The fix: onions or peppers weren't drained and blotted dry enough before folding in — give both a firmer pat-down next time.
 
-<figure><img src="/images/banana-rama/blooper-soggy-dough.png" alt="Slack, overly wet dough spreading out instead of holding its shape" /></figure>
+<figure><img src="/images/banana-rama/blooper-soggy-dough.jpg" alt="Slack, overly wet dough spreading out instead of holding its shape" /></figure>
 
 **The flat, dense loaf.** The dough struggles to rise and ends up dense and tight-crumbed. The fix: inclusions were folded in too early, before the dough had built enough strength — let it get through the first fold or two on its own first.
 
-<figure><img src="/images/banana-rama/blooper-flat-loaf.png" alt="Flat, dense loaf with a tight, low-rise profile" /></figure>
+<figure><img src="/images/banana-rama/blooper-flat-loaf.jpg" alt="Flat, dense loaf with a tight, low-rise profile" /></figure>
 
 None of this means you did something wrong — it means you're actually baking. Every one of these is a normal, forgettable part of learning a new recipe, not a reason to give up on it.

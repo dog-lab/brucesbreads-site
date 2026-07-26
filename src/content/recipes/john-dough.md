@@ -1,14 +1,14 @@
 ---
 title: "John Dough: A Classic Sourdough"
 subtitle: "Bread Flour & Whole Wheat — no frills, just technique"
-heroImage: "/images/john-dough/john_dough_01_hero.png"
+heroImage: "/images/john-dough/john_dough_01_hero.jpg"
 section: "savory"
 publishDate: 2026-07-15
 cardFilePrefix: "John_Dough_Classic"
 ddt: "75-78F (24-26C)"
 yieldNote: "Total finished dough ~950 g -- no inclusions this time, just flour, water, starter, and salt."
 hydrationSaltNote: "Hydration runs a bit higher than a seeded or heavily mixed-in loaf (78% vs. 68-75% elsewhere) since there's nothing weighing the dough down and this formula can comfortably support a more open, airy crumb. With no inclusions to think about -- just flour, water, starter, and salt -- salt holds at the standard 2%."
-flatlayImage: "/images/john-dough/john_dough_02_flatlay.png"
+flatlayImage: "/images/john-dough/john_dough_02_flatlay.jpg"
 flatlayAlt: "Ingredient flat-lay before mixing"
 dough:
   - name: "Bread flour"
@@ -146,7 +146,7 @@ booksMovies:
 
 The night before (or ~8–12 hours before mixing, depending on your kitchen's warmth), feed your starter so it peaks around the time you plan to mix. Look for it to double in size, develop a domed top that's just starting to flatten at the edges, and smell pleasantly tangy.
 
-<figure><img src="/images/john-dough/john_dough_03_starter.png" alt="Starter at peak" /></figure>
+<figure><img src="/images/john-dough/john_dough_03_starter.jpg" alt="Starter at peak" /></figure>
 
 <div class="callout"><strong>pH check (optional):</strong> a ripe starter typically falls somewhere in the roughly 3.8–4.5 range — a representative range, not a precise target. The dome-and-jiggle visual test is your primary signal.</div>
 
@@ -158,7 +158,7 @@ Salt always goes in **after** the starter, regardless of method.
 
 1. Combine the bread flour, whole wheat flour, and the 390 g water in a large bowl. Mix until no dry flour remains. This is your autolyse — rest it, covered, for at least 30 minutes and up to 90–120 minutes if your schedule allows.
 
-   <figure><img src="/images/john-dough/john_dough_04_autolyse.png" alt="Dough after autolyse, before mixing in starter" /></figure>
+   <figure><img src="/images/john-dough/john_dough_04_autolyse.jpg" alt="Dough after autolyse, before mixing in starter" /></figure>
 
 2. Add the ripe starter and work it in fully using the pincer or slap-and-fold method until incorporated.
 3. Add the salt and continue folding until no dry bits remain and the dough starts to smooth out — typically 3–5 minutes of active work total.
@@ -181,7 +181,7 @@ Bulk ferment with a series of stretch-and-folds — 4 folds at 30-minute interva
 
 **Timing:** at a moderate room temperature (~21–23°C / 70–73°F), expect bulk fermentation to take roughly 4–6 hours total. In a warmer kitchen, it'll move faster — watch the dough, not the clock. In a cooler kitchen, expect it to take longer. Look for the dough to have grown by roughly 50–75% in volume and feel jiggly and airy when you nudge the bowl.
 
-<figure><img src="/images/john-dough/john_dough_05_bulkfold.png" alt="Mid-bulk-fermentation stretch and fold" /></figure>
+<figure><img src="/images/john-dough/john_dough_05_bulkfold.jpg" alt="Mid-bulk-fermentation stretch and fold" /></figure>
 
 <div class="callout"><strong>pH check (optional):</strong> dough right after bulk fermentation typically sits in roughly the 3.9–4.3 range.</div>
 
@@ -189,7 +189,7 @@ Bulk ferment with a series of stretch-and-folds — 4 folds at 30-minute interva
 
 Turn the dough out, pre-shape into a loose round, bench-rest 15–20 minutes, then final-shape into a tight boule, building good surface tension — with nothing else in the dough to distract from it, this is a great loaf to really practice your shaping on. Place seam-side up in a floured banneton.
 
-<figure><img src="/images/john-dough/john_dough_06_shaped.png" alt="Shaped dough with surface tension" /></figure>
+<figure><img src="/images/john-dough/john_dough_06_shaped.jpg" alt="Shaped dough with surface tension" /></figure>
 
 ### 5. Proof
 
@@ -199,7 +199,7 @@ Proof at room temperature for roughly 2–4 hours, or retard in the refrigerator
 
 Turn the dough out onto parchment, score with a confident single cut.
 
-<figure><img src="/images/john-dough/john_dough_07_scored.png" alt="Scored dough, ready to bake" /></figure>
+<figure><img src="/images/john-dough/john_dough_07_scored.jpg" alt="Scored dough, ready to bake" /></figure>
 
 **Dutch oven preheat:** heat your Dutch oven, empty, to **450–475°F / 230–245°C** — not the pot's rated maximum. Check your specific Dutch oven and lid knob's rated maximum before going higher than this range.
 
@@ -213,7 +213,7 @@ Turn the dough out onto parchment, score with a confident single cut.
 
 Cool on a wire rack for at least 1–2 hours before slicing — the crumb is still setting internally, and cutting too early makes it gummy.
 
-<figure><img src="/images/john-dough/john_dough_08_crumb.png" alt="Crumb, fully cooled and sliced" /></figure>
+<figure><img src="/images/john-dough/john_dough_08_crumb.jpg" alt="Crumb, fully cooled and sliced" /></figure>
 
 ## Alternatives and Improvements
 
@@ -238,7 +238,7 @@ Cool on a wire rack for at least 1–2 hours before slicing — the crumb is sti
 
 Wheat's domestication traces back roughly ten thousand years to the Fertile Crescent, the arc of land running through the modern Middle East where early farming communities first began cultivating wild grasses into the ancestor of the wheat used in bread today. From there, wheat cultivation spread outward along trade routes and migration paths, eventually becoming the dominant grain across huge stretches of Europe, North Africa, and Asia.
 
-<figure><img src="/images/john-dough/john_dough_09_wheat_origin.png" alt="Wheat field evoking the Fertile Crescent's ancient farmland" /></figure>
+<figure><img src="/images/john-dough/john_dough_09_wheat_origin.jpg" alt="Wheat field evoking the Fertile Crescent's ancient farmland" /></figure>
 
 Ancient Egypt holds a particularly central place in bread's story — Egyptians are widely credited with being among the first to discover, likely by accident, that dough left out would begin to bubble and rise on its own, courtesy of wild airborne yeast. What started as a happy accident became a deliberate technique, and the basic principle — flour, water, and time, with nothing added but patience — is the exact same one still at work in the starter sitting on your counter today.
 
@@ -254,14 +254,14 @@ Even a well-tested recipe goes sideways sometimes — here's what that can look 
 
 **The wild blowout.** Instead of a clean, controlled opening along the score line, the loaf splits dramatically out one side, looking more like it exploded than baked. The fix: score at a confident angle and consistent depth — a shallow, hesitant score is often the real culprit, not the oven.
 
-<figure><img src="/images/john-dough/john_dough_10_blooper_blowout.png" alt="Dramatic, uneven loaf blowout from under-scoring" /></figure>
+<figure><img src="/images/john-dough/john_dough_10_blooper_blowout.jpg" alt="Dramatic, uneven loaf blowout from under-scoring" /></figure>
 
 **The pancake.** The dough spread wide and flat instead of holding a dome, both in the banneton and again in the oven. The fix: this is almost always over-proofing — trust the poke-test over the clock, especially once you're comfortable enough to start pushing proof times longer.
 
-<figure><img src="/images/john-dough/john_dough_11_blooper_flat.png" alt="Flat, over-proofed loaf that lost its dome" /></figure>
+<figure><img src="/images/john-dough/john_dough_11_blooper_flat.jpg" alt="Flat, over-proofed loaf that lost its dome" /></figure>
 
 **The starter that went too far.** A layer of dark liquid ("hooch") sitting on top of a starter that's collapsed back down instead of staying domed — a sign it peaked hours ago and has been running on empty since. The fix: pour off the hooch, give it a fresh feeding, and plan your next mix a little closer to peak next time.
 
-<figure><img src="/images/john-dough/john_dough_12_blooper_hooch.png" alt="Starter with hooch layer and a collapsed, deflated dome" /></figure>
+<figure><img src="/images/john-dough/john_dough_12_blooper_hooch.jpg" alt="Starter with hooch layer and a collapsed, deflated dome" /></figure>
 
 None of this means you did something wrong — it means you're actually baking. Every one of these is a normal, forgettable part of learning a new recipe, not a reason to give up on it.
