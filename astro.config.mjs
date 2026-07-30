@@ -1,22 +1,16 @@
 import { defineConfig } from 'astro/config';
-import node from '@astrojs/node';
-import tina from '@tinacms/astro/integration';
-import { tinaAdminDevRedirect } from '@tinacms/astro/vite';
 
-// https://astro.build/config
-// output stays 'static' (the site's original, correct mode) -- Tina's Astro
-// integration supports "static-site editing": <TinaIsland> emits its own tiny
-// in-iframe bootstrap and doesn't need the whole site server-rendered. Only
-// the one editor-refresh endpoint (src/pages/tina-island/[name].ts) opts out
-// of prerendering on its own. An adapter is still required (the island
-// endpoint needs somewhere to run on demand), just not output: 'server'.
-// See https://tina.io/docs/contextual-editing/astro#static-site-editing.
+// TinaCMS is deliberately *not* wired in here as an integration. Bruce's
+// Breads uses Tina in plain admin-form mode only (see tina/config.ts) --
+// editing recipe/Sami frontmatter through the form at /admin/index.html, no
+// click-to-edit on the live page. That admin UI is a self-contained static
+// SPA that `tinacms build` writes into public/admin/, so Astro just serves
+// it like any other static asset -- no @tinacms/astro integration, no SSR
+// adapter, no output: 'server' needed. (An earlier pass at this scaffolded
+// the full contextual-editing plumbing -- @tinacms/astro, a Node adapter,
+// the tina-island endpoint -- before settling on the simpler form-only
+// approach; that scaffold was moved to _tina-scaffold-removed/ for Bruce to
+// delete once he's confirmed he doesn't want it.)
 export default defineConfig({
   output: 'static',
-  adapter: node({ mode: 'standalone' }),
-  integrations: [tina()],
-  vite: {
-    plugins: [tinaAdminDevRedirect()],
-    ssr: { noExternal: ['@tinacms/astro', '@tinacms/bridge'] },
-  },
 });

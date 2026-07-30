@@ -1,0 +1,29 @@
+---
+// EchoThread comment widget -- see https://echothread.io/docs/guides/astro
+// Plain <script> tag, no client directive needed: Astro renders the HTML at
+// build time and the widget self-initializes in the browser. Currently wired
+// into recipe pages only (src/pages/recipes/[slug].astro); extend to Sami
+// stories or a future blog collection the same way -- just pass a stable
+// pageId (the collection entry's slug) so comments survive URL changes.
+interface Props {
+  pageId: string;
+  pageTitle: string;
+  pageUrl: string;
+}
+const { pageId, pageTitle, pageUrl } = Astro.props;
+
+// TODO(Bruce): replace with the real API key from https://echothread.io/dashboard
+// once you've created an account -- see the "Action needed" checklist.
+const ECHOTHREAD_API_KEY = 'YOUR_API_KEY';
+---
+<section class="block" id="comments">
+  <h2>Notes &amp; Comments</h2>
+  <div
+    id="echothread"
+    data-api-key={ECHOTHREAD_API_KEY}
+    data-page-url={pageUrl}
+    data-identifier={pageId}
+    data-page-title={pageTitle}
+  ></div>
+  <script src="https://cdn.echothread.io/widget.js"></script>
+</section>

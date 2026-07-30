@@ -25,3 +25,10 @@ pnpm-debug.log*
 
 node_modules
 tina/__generated__
+
+# Removed contextual-editing scaffold (@tinacms/astro, tina-island, demo
+# page) -- Cowork's sandbox couldn't delete these files outright, only move
+# them, so they're parked here instead. Safe to delete for real from
+# Explorer/Terminal; ignored in the meantime so a forgotten delete doesn't
+# get committed.
+_tina-scaffold-removed/

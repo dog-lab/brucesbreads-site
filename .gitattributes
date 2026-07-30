@@ -1,0 +1,19 @@
+# Force LF line endings for all text files regardless of OS or local git
+# config (core.autocrlf). This repo is worked on from both a Windows machine
+# and a Mac (see CLAUDE.md "Working across Windows and Mac") -- without this,
+# a fresh checkout on Windows converts every tracked text file to CRLF, which
+# then shows as a full-file diff noise on the next edit even though nothing
+# meaningful changed. Added July 30, 2026 after exactly that happened.
+* text=auto eol=lf
+
+# Binary assets -- don't run any text/eol normalization on these.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.woff binary
+*.woff2 binary
+*.ttf binary

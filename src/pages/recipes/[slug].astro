@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from 'astro:content';
 import RecipeLayout from '../../layouts/RecipeLayout.astro';
+import EchoThread from '../../components/EchoThread.astro';
 
 export async function getStaticPaths() {
   const recipes = await getCollection('recipes');
@@ -148,6 +149,12 @@ const {
         </div>
       ))}
     </section>
+
+    <EchoThread
+      pageId={recipe.id}
+      pageTitle={title}
+      pageUrl={Astro.url.href}
+    />
 
   </main>
 </RecipeLayout>
