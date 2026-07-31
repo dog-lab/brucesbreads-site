@@ -85,3 +85,10 @@ footer .fine-print {
   font-size: 0.8rem;
   color: var(--egg-wash);
 }
+
+#echothread {
+  --et-color-bg: var(--crumb);
+  --et-color-text: var(--dark-text);
+  --et-color-accent: var(--tomato);
+  --et-radius: 30px;
+}

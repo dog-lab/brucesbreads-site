@@ -19,7 +19,11 @@
   "allowScripts": {
     "zod@4.4.3": true,
     "esbuild@0.28.1": true,
-    "fsevents@2.3.3": true
+    "fsevents@2.3.3": true,
+    "esbuild@0.24.2": true,
+    "esbuild@0.18.20": true,
+    "better-sqlite3@12.11.1": true,
+    "core-js@3.49.0": true
   },
   "devDependencies": {
     "@tinacms/cli": "^2.5.6",
