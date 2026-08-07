@@ -2,7 +2,7 @@
 title: "Banana-rama Sourdough"
 subtitle: "Bread Flour & Whole Wheat, loaded with Roasted Banana Peppers, Sharp Provolone, and Caramelized Onions"
 heroImage: "/images/banana-rama/hero-sliced-loaf.jpg"
-section: "savory"
+section: "classics"
 publishDate: 2026-01-15
 cardFilePrefix: "Banana-rama"
 ddt: "75-78F (24-26C)"

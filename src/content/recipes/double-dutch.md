@@ -2,7 +2,7 @@
 title: "Double Dutch: Kalamata Olive & Gouda Sourdough"
 subtitle: "Bread Flour & Whole Wheat, studded with Kalamata Olives and Aged Gouda"
 heroImage: "/images/double-dutch/double_dutch_01_hero.jpg"
-section: "savory"
+section: "classics"
 publishDate: 2026-07-14
 cardFilePrefix: "Double_Dutch_Kalamata_Gouda"
 ddt: "75-78F (24-26C)"

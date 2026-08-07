@@ -2,7 +2,7 @@
 title: "Korean Swiss Cheese: A Gochujang-Swirled Sourdough"
 subtitle: "Bread Flour & Semolina, studded with Gruyère and Scallions, swirled with Gochujang"
 heroImage: "/images/korean-swiss-cheese/hero-sliced-loaf.jpg"
-section: "savory"
+section: "classics"
 publishDate: 2026-07-15
 cardFilePrefix: "Korean_Swiss_Cheese"
 ddt: "75-78F (24-26C)"

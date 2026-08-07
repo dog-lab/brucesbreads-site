@@ -2,7 +2,7 @@
 title: "Seed Spitters: A Seeded Sourdough World Tour"
 subtitle: "Bread Flour, Spelt & Einkorn, studded with Rolled Oats, Chia, Flax, and Sesame"
 heroImage: "/images/seed-spitters/01_hero_sliced_loaf.jpg"
-section: "savory"
+section: "classics"
 publishDate: 2026-07-14
 cardFilePrefix: "Seed_Spitters_Seeded_Sourdough"
 ddt: "75F (24C) -- whole-grain-heavy dough"

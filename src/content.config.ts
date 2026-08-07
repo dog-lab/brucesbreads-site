@@ -64,7 +64,18 @@ const recipes = defineCollection({
     title: z.string(),
     subtitle: z.string(),
     heroImage: z.string(),
-    section: z.enum(['savory', 'sweet', 'discards']),
+    // Bread-type menu structure decided August 3, 2026 (see CLAUDE.md's
+    // "Recipe menu structure (categories)") -- supersedes the earlier
+    // savory/sweet/discards split. Classics vs. enriched-sweet is decided
+    // by butter/milk dairy enrichment, not by whether the bake tastes sweet.
+    section: z.enum([
+      'classics',
+      'enriched-sweet',
+      'pastry-lamination',
+      'discards',
+      'gluten-free',
+      'everyday-bakes',
+    ]),
     // Matches the printable-extras PDF filenames in public/cards/, e.g.
     // "Banana-rama" -> Banana-rama_Recipe_Card.pdf. Deliberately its own
     // field rather than derived from the slug -- a couple of recipes'

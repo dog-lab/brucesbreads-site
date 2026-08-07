@@ -2,7 +2,7 @@
 title: "Dirty Martini Sourdough"
 subtitle: "Briny olives, orange zest, and fresh thyme — a savory loaf built like the cocktail it's named for."
 heroImage: "/images/dirty-martini/hero-shot.jpg"
-section: "savory"
+section: "classics"
 publishDate: 2026-07-16
 cardFilePrefix: "Dirty_Martini"
 ddt: "75-78F (24-26C)"

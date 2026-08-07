@@ -2,7 +2,7 @@
 title: "John Dough: A Classic Sourdough"
 subtitle: "Bread Flour & Whole Wheat — no frills, just technique"
 heroImage: "/images/john-dough/john_dough_01_hero.jpg"
-section: "savory"
+section: "classics"
 publishDate: 2026-07-15
 cardFilePrefix: "John_Dough_Classic"
 ddt: "75-78F (24-26C)"

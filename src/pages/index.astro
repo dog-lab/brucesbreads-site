@@ -1,13 +1,38 @@
 ---
-// Minimal real homepage — just enough to prove the pipeline (repo ->
-// Netlify -> live URL) and to link to the two migrated content pages.
-// During the full migration this gets the complete menu grid (all 6
-// recipes) and Sami card grid (all 3 stories) back, generated from the
-// collections instead of hand-written.
 import { getCollection } from 'astro:content';
 
 const recipes = await getCollection('recipes');
 const stories = await getCollection('sami');
+
+// Bread-type menu structure decided August 3, 2026 (see CLAUDE.md's
+// "Recipe menu structure (categories)"). Only sections that actually have
+// a published recipe get a heading -- Everyday Bakes stays deferred per
+// CLAUDE.md until there's enough content to justify its own grouping, and
+// the other empty sections (Enriched & Sweet, Pastry & Lamination,
+// Discards, Gluten Free) will pick up a heading automatically the moment
+// their first recipe (Orange Brioche, a discard focaccia, etc.) ships --
+// no template change needed then.
+const SECTION_ORDER = [
+  'classics',
+  'enriched-sweet',
+  'pastry-lamination',
+  'discards',
+  'gluten-free',
+  'everyday-bakes',
+] as const;
+const SECTION_LABELS: Record<string, string> = {
+  'classics': 'The Classics',
+  'enriched-sweet': 'Enriched & Sweet',
+  'pastry-lamination': 'Pastry & Lamination',
+  'discards': 'Discards',
+  'gluten-free': 'Gluten Free',
+  'everyday-bakes': 'Everyday Bakes',
+};
+const recipesBySection = SECTION_ORDER.map((section) => ({
+  section,
+  label: SECTION_LABELS[section],
+  items: recipes.filter((r) => r.data.section === section),
+})).filter((group) => group.items.length > 0);
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -83,6 +108,20 @@ const stories = await getCollection('sami');
       font-style: italic;
       color: #5c4a37;
       margin-bottom: 40px;
+    }
+    .section-group {
+      margin-bottom: 44px;
+    }
+    .section-group:last-child {
+      margin-bottom: 0;
+    }
+    .section-heading {
+      text-align: left;
+      color: var(--crust-dark, #5c4a37);
+      font-size: 1.3rem;
+      border-bottom: 1px solid var(--egg-wash);
+      padding-bottom: 8px;
+      margin: 0 0 20px;
     }
     .grid {
       display: grid;
@@ -172,17 +211,22 @@ const stories = await getCollection('sami');
 
 <section id="menu">
   <h2>What's Rising Today</h2>
-  <p class="subhead">Every loaf is proofed longer than Bruce's hairline has been gone. (Migration in progress — more recipes landing here soon.)</p>
-  <div class="grid">
-    {recipes.map((recipe) => (
-      <div class="card">
-        <img src={recipe.data.heroImage} alt={recipe.data.title} class="card-thumb" />
-        <h3>{recipe.data.title}</h3>
-        <p>{recipe.data.subtitle}</p>
-        <a href={`/recipes/${recipe.id}/`} class="recipe-link">View recipe &rarr;</a>
+  <p class="subhead">Every loaf is proofed longer than Bruce's hairline has been gone.</p>
+  {recipesBySection.map((group) => (
+    <div class="section-group">
+      <h3 class="section-heading">{group.label}</h3>
+      <div class="grid">
+        {group.items.map((recipe) => (
+          <div class="card">
+            <img src={recipe.data.heroImage} alt={recipe.data.title} class="card-thumb" />
+            <h3>{recipe.data.title}</h3>
+            <p>{recipe.data.subtitle}</p>
+            <a href={`/recipes/${recipe.id}/`} class="recipe-link">View recipe &rarr;</a>
+          </div>
+        ))}
       </div>
-    ))}
-  </div>
+    </div>
+  ))}
 </section>
 
 <section id="about" style="background: var(--wheat-100);">

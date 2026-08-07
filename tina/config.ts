@@ -94,7 +94,16 @@ export default defineConfig({
             type: "string",
             name: "section",
             label: "Menu Section",
-            options: ["savory", "sweet", "discards"],
+            description:
+              "Bread-type structure decided August 3, 2026 -- Classics vs. Enriched & Sweet is decided by butter/milk dairy enrichment, not sweetness. See CLAUDE.md's 'Recipe menu structure (categories)'.",
+            options: [
+              { value: "classics", label: "The Classics" },
+              { value: "enriched-sweet", label: "Enriched & Sweet" },
+              { value: "pastry-lamination", label: "Pastry & Lamination" },
+              { value: "discards", label: "Discards" },
+              { value: "gluten-free", label: "Gluten Free" },
+              { value: "everyday-bakes", label: "Everyday Bakes" },
+            ],
           },
           {
             type: "string",
