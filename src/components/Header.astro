@@ -1,0 +1,28 @@
+---
+// Shared header/nav chrome -- used by index.astro, RecipeLayout.astro, and
+// SamiLayout.astro so the mobile hamburger toggle only has to be built and
+// maintained in one place (previously this markup was hand-duplicated in
+// all three, which is exactly the kind of per-page-touch the Astro
+// migration was supposed to get us away from -- see CLAUDE.md's mobile
+// responsiveness To Do item).
+//
+// The toggle itself is a pure-CSS "checkbox hack" (input#nav-toggle +
+// label styled as a hamburger icon + a `:checked ~ nav` sibling selector
+// in styles.css) rather than a client-side script, since this is a fully
+// static site with no other JS/hydration anywhere -- no reason to add a
+// script just for a menu button. All three hrefs are root-relative
+// ("/#menu" etc.) so this component works unchanged whether it's rendered
+// on the homepage itself or on a recipe/Sami page linking back to it.
+---
+<header>
+  <div class="brand"><img src="/logo_v2_cropped.jpg" alt="Bruce's Breads logo" class="logo" /></div>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+  <label for="nav-toggle" class="nav-toggle-btn" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </label>
+  <nav>
+    <a href="/#menu">Menu</a>
+    <a href="/#about">About</a>
+    <a href="/#sami">Sami</a>
+  </nav>
+</header>

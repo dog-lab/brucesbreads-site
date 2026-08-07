@@ -1,5 +1,6 @@
 ---
 import { getCollection } from 'astro:content';
+import Header from '../components/Header.astro';
 
 const recipes = await getCollection('recipes');
 const stories = await getCollection('sami');
@@ -181,20 +182,22 @@ const recipesBySection = SECTION_ORDER.map((section) => ({
       font-style: italic;
       color: #5c4a37;
     }
+
+    @media (max-width: 700px) {
+      .hero { height: 62vh; min-height: 340px; }
+      .hero-text { left: 5%; right: 5%; max-width: none; }
+      .hero-text h1 { font-size: 1.9rem; }
+      .hero-text p { font-size: 1rem; }
+      section { padding: 24px 5%; }
+      h2 { font-size: 1.7rem; }
+      .about { flex-direction: column; text-align: center; gap: 20px; }
+      .about img { width: 160px; height: 160px; }
+    }
   </style>
 </head>
 <body>
 
-<header>
-  <div class="brand">
-    <img src="/logo_v2_cropped.jpg" alt="Bruce's Breads logo" class="logo" />
-  </div>
-  <nav>
-    <a href="#menu">Menu</a>
-    <a href="#about">About</a>
-    <a href="#sami">Sami</a>
-  </nav>
-</header>
+<Header />
 
 <div class="hero">
   <img src="/hero.jpg" alt="Bruce holding a fresh loaf of bread triumphantly" />

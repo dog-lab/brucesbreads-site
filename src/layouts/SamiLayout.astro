@@ -1,6 +1,8 @@
 ---
 // Real chrome, ported from website/sami/*.html + the shared
 // website/styles.css.
+import Header from '../components/Header.astro';
+
 interface Props {
   title: string;
 }
@@ -34,18 +36,20 @@ const { title } = Astro.props;
     .more-soon { text-align: center; font-style: italic; color: #5c4a37; margin-top: 12px; }
     .back-link { display: inline-block; margin: 28px 6% 0; color: var(--tomato); text-decoration: none; font-weight: 600; }
     .back-link:hover { text-decoration: underline; }
+
+    @media (max-width: 700px) {
+      main { padding: 16px 5% 50px; font-size: 1rem; }
+      .title-block { padding: 28px 5% 8px; }
+      .title-block h1 { font-size: 1.8rem; }
+      .title-block .subtitle { font-size: 0.98rem; }
+      .hero img { max-height: 300px; }
+      .closing { font-size: 1.05rem; }
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="brand"><img src="/logo_v2_cropped.jpg" alt="Bruce's Breads logo" class="logo" /></div>
-    <nav>
-      <a href="/#menu">Menu</a>
-      <a href="/#about">About</a>
-      <a href="/#sami">Sami</a>
-    </nav>
-  </header>
+  <Header />
 
   <a class="back-link" href="/#sami">&larr; Back to Sami's page</a>
 

@@ -54,6 +54,50 @@ nav a {
 /* nav a:hover color is page-specific (index.html uses crust-dark,
    recipe/sami pages use tomato) — declared locally in each page. */
 
+/* Mobile nav toggle (pure-CSS checkbox hack, see Header.astro) — the
+   checkbox and its label are visually hidden above the breakpoint below,
+   where the nav just displays inline as it always has. */
+.nav-toggle { position: absolute; opacity: 0; pointer-events: none; }
+.nav-toggle-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 26px;
+  height: 19px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.nav-toggle-btn span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: var(--dark-text);
+  border-radius: 2px;
+}
+
+@media (max-width: 700px) {
+  header { flex-wrap: wrap; padding: 14px 5%; }
+  header img.logo { height: 40px; }
+  .nav-toggle-btn { display: flex; }
+  nav {
+    display: none;
+    flex-basis: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 14px;
+    padding-top: 10px;
+    border-top: 1px solid var(--egg-wash);
+  }
+  nav a {
+    margin-left: 0;
+    padding: 12px 4px;
+    border-bottom: 1px solid #f0e6d2;
+  }
+  nav a:last-child { border-bottom: none; }
+  .nav-toggle:checked ~ nav { display: flex; }
+  .nav-toggle:focus-visible ~ .nav-toggle-btn { outline: 2px solid var(--tomato); outline-offset: 2px; }
+}
+
 .btn {
   display: inline-block;
   background: var(--tomato);

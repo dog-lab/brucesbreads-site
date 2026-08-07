@@ -2,6 +2,8 @@
 // Real chrome, ported from website/recipes/*.html + the shared
 // website/styles.css. /styles.css and /logo_v2_cropped.jpg are served
 // from the public/ folder at the site root.
+import Header from '../components/Header.astro';
+
 interface Props {
   title: string;
 }
@@ -51,18 +53,35 @@ const { title } = Astro.props;
     .playlist-group h4 { margin-bottom: 4px; }
     .back-link { display: inline-block; margin: 28px 6% 0; color: var(--tomato); text-decoration: none; font-weight: 600; }
     .back-link:hover { text-decoration: underline; }
+
+    /* Table overflow safety net: table text still wraps normally by
+       default (word-break below is the real guard against a stray long
+       token forcing overflow) -- display:block + overflow-x:auto only
+       kicks in as a fallback if a table's content genuinely can't fit,
+       so a table scrolls in place rather than the whole page scrolling
+       sideways. Applies to every table on the page, including the
+       Troubleshooting/FAQ table that comes from the Markdown body via
+       <Content/> (see [slug].astro) -- that one isn't reachable from
+       this file directly, so a template-level fix isn't an option, only
+       a global CSS one. */
+    td, th { word-break: break-word; }
+    @media (max-width: 700px) {
+      main { padding: 0 5% 50px; }
+      .recipe-title-block { padding: 28px 5% 8px; }
+      .recipe-title-block h1 { font-size: 1.9rem; }
+      .recipe-title-block .subtitle { font-size: 1rem; }
+      .recipe-hero img { max-height: 260px; }
+      h2 { font-size: 1.5rem; }
+      h3 { font-size: 1.15rem; }
+      table { display: block; overflow-x: auto; max-width: 100%; }
+      th, td { padding: 8px 10px; font-size: 0.92rem; }
+      .printable-extras { justify-content: center; text-align: center; }
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="brand"><img src="/logo_v2_cropped.jpg" alt="Bruce's Breads logo" class="logo" /></div>
-    <nav>
-      <a href="/#menu">Menu</a>
-      <a href="/#about">About</a>
-      <a href="/#sami">Sami</a>
-    </nav>
-  </header>
+  <Header />
 
   <a class="back-link" href="/#menu">&larr; Back to the menu</a>
 
