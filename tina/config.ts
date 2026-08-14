@@ -1,9 +1,14 @@
 import { defineConfig } from "tinacms";
 
-// Your hosting provider likely exposes this as an environment variable
+// Your hosting provider likely exposes this as an environment variable.
+// Cloudflare Pages sets CF_PAGES_BRANCH (not GITHUB_BRANCH/VERCEL_GIT_COMMIT_REF/
+// HEAD), so without this the branch always silently fell back to "main" on
+// Cloudflare builds -- fine for the production branch, but it would point
+// preview deploys on other branches at the wrong Tina Cloud content.
 const branch =
   process.env.GITHUB_BRANCH ||
   process.env.VERCEL_GIT_COMMIT_REF ||
+  process.env.CF_PAGES_BRANCH ||
   process.env.HEAD ||
   "main";
 

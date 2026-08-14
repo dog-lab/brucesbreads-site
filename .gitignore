@@ -32,3 +32,14 @@ tina/__generated__
 # Explorer/Terminal; ignored in the meantime so a forgotten delete doesn't
 # get committed.
 _tina-scaffold-removed/
+
+# Tina admin is local-editing-only (August 2026, no Tina Cloud account) --
+# the static /admin bundle `tinacms build` produces has no backend to talk to
+# once deployed, so it's not tracked. `npm run build:admin` regenerates it
+# locally if you ever want to eyeball it; nothing consumes the output.
+public/admin/
+
+# Same Cowork-sandbox delete limitation as above -- the previously-committed
+# public/admin/ was moved here instead of deleted. Safe to delete for real
+# from Finder/Terminal.
+_tina-admin-removed/
