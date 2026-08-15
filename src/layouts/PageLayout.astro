@@ -1,0 +1,74 @@
+---
+// Shared layout for top-level, non-recipe pages (About, Sami hub, Resources
+// hub and its sub-pages, and future top-level pages like Guides or Blog).
+// Deliberately lighter than RecipeLayout: no back-link (a visitor landing
+// on /about or /sami didn't come from the recipe menu, so "back to the
+// menu" would be a non-sequitur there), and reuses the shared .page-section/
+// .grid/.card/.callout/.pdf-pill classes added to styles.css for this
+// restructure rather than each page reinventing its own layout CSS.
+import Header from '../components/Header.astro';
+
+interface Props {
+  title: string;
+  subtitle?: string;
+}
+const { title, subtitle } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{title} — Bruce's Breads</title>
+  <link rel="stylesheet" href="/styles.css" />
+  <style>
+    nav a:hover { color: var(--tomato); }
+    .page-hero {
+      text-align: center;
+      padding: 44px 6% 8px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .page-hero h1 {
+      color: var(--crust);
+      font-size: 2.6rem;
+      margin: 0 0 8px;
+    }
+    .page-hero .subtitle {
+      font-style: italic;
+      color: var(--crust-dark);
+      font-size: 1.15rem;
+    }
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 6% 60px;
+    }
+    @media (max-width: 700px) {
+      .page-hero { padding: 28px 5% 6px; }
+      .page-hero h1 { font-size: 1.9rem; }
+      main { padding: 0 5% 50px; }
+    }
+  </style>
+</head>
+<body>
+
+  <Header />
+
+  <div class="page-hero">
+    <h1>{title}</h1>
+    {subtitle && <p class="subtitle">{subtitle}</p>}
+  </div>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer>
+    <p>Bruce's Breads &middot; Fresh Bread, Fresh Puns, Zero Hair</p>
+    <div class="signature">Bread proudly brought to you by Bruce the Bald Baker</div>
+    <div class="fine-print">&copy; 2026 Bruce's Breads. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>

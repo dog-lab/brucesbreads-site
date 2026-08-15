@@ -158,4 +158,22 @@ const sami = defineCollection({
   }),
 });
 
-export const collections = { recipes, sami };
+// Guides collection -- the site's baking-technique reference library
+// (pH/Flour/Hydration, Proofing & Shaping, Braiding, Flour Types &
+// Blending, Salt, plus the 4-part Starter Guide), ported into the live
+// site Aug 15, 2026 once Bruce signed off after several review passes.
+// `group`/`order` drive the guides/index.astro hub grouping -- the four
+// Starter Guide parts share group "Starter Guide" and order 1-4 (listed
+// first, since the standing starter is the conceptual prerequisite for
+// everything else); the five standalone guides are ungrouped, order 5-9.
+const guides = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/guides' }),
+  schema: z.object({
+    title: z.string(),
+    subtitle: z.string().optional(),
+    group: z.string().optional(),
+    order: z.number().default(0),
+  }),
+});
+
+export const collections = { recipes, sami, guides };

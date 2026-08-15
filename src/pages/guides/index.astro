@@ -1,0 +1,45 @@
+---
+// Guides hub -- lists the four Starter Guide parts as one card (linking
+// to Part 1) plus the five standalone guides individually, all sorted by
+// the `order` field set in content.config.ts. Went live Aug 15, 2026
+// once Bruce had reviewed every guide and signed off.
+import { getCollection } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+
+const guides = (await getCollection('guides')).sort((a, b) => a.data.order - b.data.order);
+const starterGuides = guides.filter((g) => g.data.group === 'Starter Guide');
+const standaloneGuides = guides.filter((g) => !g.data.group);
+const firstStarterGuide = starterGuides[0];
+---
+<PageLayout title="Guides" subtitle="The technique reference behind every recipe on this site.">
+
+  <p>These are the guides the recipes assume you've read — the science and technique behind pH, flour, hydration, shaping, proofing, braiding, salt, and the starter itself. Start with the Starter Guide if you're building a culture from scratch; otherwise jump to whichever lever is giving you trouble today.</p>
+
+  <div class="section-group">
+    <h3 class="section-heading">Starter Guide</h3>
+    <div class="grid">
+      {firstStarterGuide && (
+        <div class="card">
+          <img src="/images/guides/03_ripe_mature_starter.jpg" alt="A mature, ripe sourdough starter doubled in volume with a domed top" class="card-thumb" />
+          <h3>The Starter Guide</h3>
+          <p>Four parts: creating a starter, maintaining it, choosing a hydration and flour, and building a levain.</p>
+          <a href={`/guides/${firstStarterGuide.id}/`} class="recipe-link">Start with Part 1 &rarr;</a>
+        </div>
+      )}
+    </div>
+  </div>
+
+  <div class="section-group">
+    <h3 class="section-heading">Technique Guides</h3>
+    <div class="grid">
+      {standaloneGuides.map((guide) => (
+        <div class="card">
+          <h3>{guide.data.title}</h3>
+          <p>{guide.data.subtitle}</p>
+          <a href={`/guides/${guide.id}/`} class="recipe-link">Read the guide &rarr;</a>
+        </div>
+      ))}
+    </div>
+  </div>
+
+</PageLayout>

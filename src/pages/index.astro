@@ -3,7 +3,21 @@ import { getCollection } from 'astro:content';
 import Header from '../components/Header.astro';
 
 const recipes = await getCollection('recipes');
-const stories = await getCollection('sami');
+const stories = (await getCollection('sami')).sort(
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+const recentStories = stories.slice(0, 2);
+
+// Recipes that are baked, approved, and written up in full, but deliberately
+// kept out of the `recipes` content collection because their nutrition/dough
+// tables aren't finished yet (see each stub page for why). Added here by
+// hand, one line per recipe, so they're still discoverable from the
+// homepage instead of only reachable through a Guides cross-link. Aug 15,
+// 2026 nav restructure.
+const comingSoon = [
+  { image: '/images/brioche-base/hero-card.jpg', title: 'Brioche Base', teaser: 'A stiff-starter enriched base, built for braids and butter alike.', href: '/recipes/brioche-base/' },
+  { image: '/images/laminated-pastry-base/hero-card.jpg', title: 'Laminated Pastry Base', teaser: 'A stiff-starter détrempe, folded and turned for a flaky, buttery crumb.', href: '/recipes/laminated-pastry-base/' },
+];
 
 // Bread-type menu structure decided August 3, 2026 (see CLAUDE.md's
 // "Recipe menu structure (categories)"). Only sections that actually have
@@ -232,6 +246,23 @@ const recipesBySection = SECTION_ORDER.map((section) => ({
   ))}
 </section>
 
+{comingSoon.length > 0 && (
+  <section id="coming-soon">
+    <h2>Baking Soon</h2>
+    <p class="subhead">Tested, approved, and waiting on their full write-up.</p>
+    <div class="grid">
+      {comingSoon.map((item) => (
+        <div class="card">
+          <img src={item.image} alt={item.title} class="card-thumb" />
+          <h3>{item.title}</h3>
+          <p>{item.teaser}</p>
+          <a href={item.href} class="recipe-link">Sneak peek &rarr;</a>
+        </div>
+      ))}
+    </div>
+  </section>
+)}
+
 <section id="about" style="background: var(--wheat-100);">
   <div class="section-inner">
     <h2>Meet the Baker</h2>
@@ -241,7 +272,7 @@ const recipesBySection = SECTION_ORDER.map((section) => ({
       <div class="about-text">
         <p>Bruce started baking bread twenty years ago after one particularly stubborn loaf convinced him he'd found his calling. What began as a weekend hobby turned into a full-blown bakery obsession.</p>
         <blockquote>"They say a bald head reflects light. I like to think mine reflects glory — mostly the glory of a perfectly baked crust." — Bruce</blockquote>
-        <p>Today, Bruce bakes every loaf by hand, kneads out his stress, and firmly believes a good crust can fix most of life's problems.</p>
+        <p><a href="/about/" class="recipe-link">Read the full story, and what this site actually is &rarr;</a></p>
       </div>
     </div>
   </div>
@@ -251,7 +282,7 @@ const recipesBySection = SECTION_ORDER.map((section) => ({
   <h2>Meet Sami the Sourdough Sandwich</h2>
   <p class="subhead">Half loaf, half legend, entirely delicious.</p>
   <div class="grid">
-    {stories.map((story) => (
+    {recentStories.map((story) => (
       <div class="card">
         <div class="emoji">{story.data.mapPin.emoji}</div>
         <h3>{story.data.title.replace('Sami the Sourdough Sandwich ', '')}</h3>
@@ -260,7 +291,7 @@ const recipesBySection = SECTION_ORDER.map((section) => ({
       </div>
     ))}
   </div>
-  <p class="subhead" style="margin-top:32px;">More of Sami's adventures are on the way. <a href="/sami/story-map/" class="recipe-link">See Sami's map &rarr;</a></p>
+  <p class="subhead" style="margin-top:32px;"><a href="/sami/" class="recipe-link">Meet the rest of Sami's family and see all of his adventures &rarr;</a></p>
 </section>
 
 <footer>

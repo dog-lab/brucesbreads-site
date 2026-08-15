@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+
+const stories = (await getCollection('sami')).sort(
+  (a, b) => b.data.publishDate.valueOf() - a.data.publishDate.valueOf()
+);
+---
+<PageLayout title="Sami the Sourdough Sandwich" subtitle="Half loaf, half legend, entirely delicious.">
+
+  <p>Sami is a sourdough sandwich loaf with a mind of his own, a name that's secretly a semolina pun, and a habit of turning up in places a loaf of bread has no business being. He comes from a long line of San Francisco sourdoughs — the Grand Sourdoughs — and travels with (or in spite of) his sister Fari, whose name is its own flour joke waiting to be discovered. Every adventure below is real enough to earn a pin on his map.</p>
+
+  <div class="grid">
+    {stories.map((story) => (
+      <div class="card">
+        <div class="emoji">{story.data.mapPin.emoji}</div>
+        <h3>{story.data.title.replace('Sami the Sourdough Sandwich ', '')}</h3>
+        <p>{story.data.subtitle}</p>
+        <a href={`/sami/${story.id}/`} class="recipe-link">Read the adventure &rarr;</a>
+      </div>
+    ))}
+  </div>
+
+  <p class="page-subhead" style="margin-top:36px;">More of Sami's adventures are on the way — he's leaving Georgia for the first time soon. <a href="/sami/story-map/" class="recipe-link">See everywhere he's been &rarr;</a></p>
+
+</PageLayout>

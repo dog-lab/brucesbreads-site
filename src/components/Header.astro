@@ -1,18 +1,23 @@
 ---
-// Shared header/nav chrome -- used by index.astro, RecipeLayout.astro, and
-// SamiLayout.astro so the mobile hamburger toggle only has to be built and
-// maintained in one place (previously this markup was hand-duplicated in
-// all three, which is exactly the kind of per-page-touch the Astro
-// migration was supposed to get us away from -- see CLAUDE.md's mobile
-// responsiveness To Do item).
+// Shared header/nav chrome -- used by every page on the site (index.astro,
+// RecipeLayout.astro, PageLayout.astro, and SamiLayout.astro) so the mobile
+// hamburger toggle only has to be built and maintained in one place.
 //
 // The toggle itself is a pure-CSS "checkbox hack" (input#nav-toggle +
 // label styled as a hamburger icon + a `:checked ~ nav` sibling selector
 // in styles.css) rather than a client-side script, since this is a fully
 // static site with no other JS/hydration anywhere -- no reason to add a
-// script just for a menu button. All three hrefs are root-relative
-// ("/#menu" etc.) so this component works unchanged whether it's rendered
-// on the homepage itself or on a recipe/Sami page linking back to it.
+// script just for a menu button.
+//
+// Nav restructure, Aug 15, 2026: moved off "three anchors on one homepage"
+// (Menu/About/Sami all jumped to a section of index.astro) now that the
+// site has real top-level pages beyond the homepage. Recipes stays an
+// anchor into the homepage's recipe grid since that content still lives
+// there; Sami, Resources, and About are now real pages of their own.
+//
+// Guides went live later the same day, once Bruce had reviewed every
+// guide across several passes and signed off. Blog is still gated --
+// add a line here whenever it goes live too.
 ---
 <header>
   <div class="brand"><img src="/logo_v2_cropped.jpg" alt="Bruce's Breads logo" class="logo" /></div>
@@ -21,8 +26,10 @@
     <span></span><span></span><span></span>
   </label>
   <nav>
-    <a href="/#menu">Menu</a>
-    <a href="/#about">About</a>
-    <a href="/#sami">Sami</a>
+    <a href="/#menu">Recipes</a>
+    <a href="/guides/">Guides</a>
+    <a href="/sami/">Sami</a>
+    <a href="/resources/">Resources</a>
+    <a href="/about/">About</a>
   </nav>
 </header>

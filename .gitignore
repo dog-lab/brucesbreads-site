@@ -43,3 +43,7 @@ public/admin/
 # public/admin/ was moved here instead of deleted. Safe to delete for real
 # from Finder/Terminal.
 _tina-admin-removed/
+# Scratch holding area used when a file needs pulling out of the working
+# tree without deleting it outright (e.g. via the Cowork device bridge,
+# which cannot rm mounted files) -- never meant to be committed.
+_to_delete/

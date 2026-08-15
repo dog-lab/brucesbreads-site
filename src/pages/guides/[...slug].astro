@@ -1,0 +1,24 @@
+---
+// Rest-param route -- Starter Guide entries have ids like
+// "starter/creating-a-starter" (one path segment deeper than the five
+// standalone guides), so [slug].astro isn't enough; [...slug].astro
+// catches both depths.
+import { getCollection, render } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  return guides.map((guide) => ({
+    params: { slug: guide.id },
+    props: { guide },
+  }));
+}
+
+const { guide } = Astro.props;
+const { Content } = await render(guide);
+---
+<PageLayout title={guide.data.title} subtitle={guide.data.subtitle}>
+  <div class="guide-content">
+    <Content />
+  </div>
+</PageLayout>
