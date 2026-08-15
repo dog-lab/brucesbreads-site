@@ -1,3 +1,12 @@
-# redirect to .com site
-/	https://www.bruces-breads.com
-	
+# 301 redirect the old .org domain (any path, both bare and www) to the
+# new .com site. Domain-qualified on the "from" side so this rule only
+# fires when the incoming request's Host is brucesbreads.org -- it's a
+# no-op on bruces-breads.com even though this same file, from this same
+# repo, also gets deployed there via the Cloudflare Pages build.
+#
+# The trailing "!" forces the redirect even though this site has a real
+# index.html/page at every one of these paths -- without it, Netlify's
+# default "serve the matching file if one exists" behavior wins and the
+# redirect never fires. That was the silent failure in the previous version.
+https://brucesbreads.org/*      https://bruces-breads.com/:splat   301!
+https://www.brucesbreads.org/*  https://bruces-breads.com/:splat   301!
