@@ -1,12 +1,11 @@
-# 301 redirect the old .org domain (any path, both bare and www) to the
-# new .com site. Domain-qualified on the "from" side so this rule only
-# fires when the incoming request's Host is brucesbreads.org -- it's a
-# no-op on bruces-breads.com even though this same file, from this same
-# repo, also gets deployed there via the Cloudflare Pages build.
+# Domain-level redirect (brucesbreads.org -> bruces-breads.com) intentionally
+# does NOT live in this file. This file is shared by both Netlify and
+# Cloudflare Pages (same repo, same public/ directory), and Cloudflare Pages
+# does not support host-scoped "from" matching the way Netlify does -- it
+# silently strips the hostname and applies the rule as a bare path match
+# on whatever domain it's serving, which turned bruces-breads.com into a
+# self-redirect loop (ERR_TOO_MANY_REDIRECTS) on Aug 15, 2026.
 #
-# The trailing "!" forces the redirect even though this site has a real
-# index.html/page at every one of these paths -- without it, Netlify's
-# default "serve the matching file if one exists" behavior wins and the
-# redirect never fires. That was the silent failure in the previous version.
-https://brucesbreads.org/*      https://bruces-breads.com/:splat   301!
-https://www.brucesbreads.org/*  https://bruces-breads.com/:splat   301!
+# The domain redirect now lives in netlify.toml at the repo root instead --
+# Cloudflare Pages doesn't read that file at all, so it can't cross-contaminate
+# the two deployments again. See netlify.toml for the actual rules.
