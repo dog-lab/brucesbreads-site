@@ -93,14 +93,6 @@ A sharp-eyed reader will notice this guide's own sources don't agree on a flour 
 
 The meta-lesson both sources agree on completely: whole grain drives vigor, white flour is the food supply, and the right ratio between them depends on what stage your starter is at and what you're asking of it this week.
 
-## Stiff Starters and This Site's Base Recipes
-
-**The [Brioche Base](/recipes/brioche-base) — done.** Bruce reviewed and approved this base on August 6, 2026, switching it from a standard starter to a stiff one (45–50% hydration, 40% of flour weight) using exactly the conversion approach described above. It's the first recipe on this site to use a stiff starter for real, not just as a discussion point.
-
-**The [Laminated Pastry Base](/recipes/laminated-pastry-base) — done, and also switched.** Bruce reviewed this base on August 6, 2026 and, after initially planning to leave it as-is, asked specifically to bring in the stiff starter here too — his first time trying the technique. It now uses a 45–50%-hydration stiff starter at 20% of flour weight, softened into the cold milk the same way the Brioche Base softens its starter into cold milk and eggs, with the levain given 8–12 hours to peak.
-
-**The Soft Sandwich Loaf Base's enriched variant — done, but approved as-is rather than switched.** Bruce reviewed it on August 6, 2026 against his own hand-drafted version and judged this site's draft better, so it stays on the standard 100%-hydration starter. Confirmed not needed for this base specifically, even with the stiff-starter option demonstrated on both other bases right next to it — a live option worth revisiting for a future recipe built on this base, just not the one taken here.
-
 ---
 
 ## Sources
