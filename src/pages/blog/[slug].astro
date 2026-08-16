@@ -1,0 +1,50 @@
+---
+// Blog post route. Blog ids are flat (src/content/blog/*.md), so [slug]
+// is enough -- no nested groups like the Starter Guide needed. Post
+// bodies reuse the .guide-content CSS wholesale (the wrapper div carries
+// both classes) plus the additive .blog-content figure/figcaption rules,
+// so a blog page reads like the rest of the site. Added Aug 16, 2026
+// with the founding post.
+import { getCollection, render } from 'astro:content';
+import PageLayout from '../../layouts/PageLayout.astro';
+import EchoThread from '../../components/EchoThread.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+const dateStr = post.data.publishDate.toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+  timeZone: 'UTC',
+});
+---
+<PageLayout title={post.data.title} subtitle={post.data.subtitle}>
+  <p class="post-meta">
+    <span class="post-date">{dateStr}</span>
+    &nbsp;&middot;&nbsp;
+    {post.data.tags.map((tag) => <span class="tag-pill">{tag}</span>)}
+  </p>
+  <div class="guide-content blog-content">
+    <Content />
+
+    {/* Comments -- Bruce's call (Aug 16, 2026): the blog is the site's
+        conversational surface, so posts get EchoThread like recipes do.
+        pageId is namespaced with "blog/" so a blog post and a recipe
+        sharing a slug can never share a comment thread (recipes pass the
+        bare collection id). Placed inside .guide-content so the widget's
+        h2 picks up the same heading styling as the post body. */}
+    <EchoThread
+      pageId={`blog/${post.id}`}
+      pageTitle={post.data.title}
+      pageUrl={Astro.url.href}
+    />
+  </div>
+</PageLayout>

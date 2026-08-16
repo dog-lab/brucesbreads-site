@@ -301,3 +301,40 @@ footer .fine-print {
   .guide-content h3 { font-size: 1.15rem; }
   .guide-content th, .guide-content td { padding: 8px 10px; font-size: 0.92rem; }
 }
+
+/* Blog additions (Aug 16, 2026, blog launch with the SF Sourdough
+   founding post). Post bodies reuse .guide-content wholesale -- the
+   [slug].astro route renders <div class="guide-content blog-content"> --
+   so these rules are purely additive: figure/figcaption styling for
+   inline story images, and the byline/tag chrome under a post title
+   and on the hub cards. */
+.blog-content figure {
+  margin: 28px 0;
+}
+.blog-content figure img {
+  margin: 0;
+}
+.blog-content figcaption {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--crust-dark);
+  text-align: center;
+  padding: 8px 12px 0;
+}
+.post-meta {
+  text-align: center;
+  color: var(--crust-dark);
+  font-size: 0.95rem;
+  margin: -4px 0 28px;
+}
+.post-meta .post-date { font-weight: 600; }
+.tag-pill {
+  display: inline-block;
+  background: var(--egg-wash);
+  color: var(--dark-text);
+  border-radius: 20px;
+  padding: 3px 12px;
+  margin: 0 3px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}

@@ -176,4 +176,22 @@ const guides = defineCollection({
   }),
 });
 
-export const collections = { recipes, sami, guides };
+// Blog collection -- standalone story/history pieces (decided Aug 16, 2026:
+// these go to the blog, not Guides and not Resources). Founding post is
+// "Sourdough and the San Francisco Influence". Date-ordered on the hub;
+// `tags` are displayed now and will drive filtering once there are enough
+// posts to make filtering meaningful (the site is zero-JS by convention,
+// so that will likely be per-tag static pages rather than client-side).
+const blog = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
+  schema: z.object({
+    title: z.string(),
+    subtitle: z.string().optional(),
+    heroImage: z.string().optional(),
+    heroAlt: z.string().optional(),
+    tags: z.array(z.string()).default([]),
+    publishDate: z.date(),
+  }),
+});
+
+export const collections = { recipes, sami, guides, blog };
