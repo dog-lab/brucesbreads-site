@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 // TinaCMS is deliberately *not* wired in here as an integration. Bruce's
 // Breads uses Tina in plain admin-form mode only (see tina/config.ts) --
@@ -23,5 +24,8 @@ import { defineConfig } from 'astro/config';
 // it's inert on the live site either way (no backend for it to talk to), so
 // letting it go stale between schema changes is harmless, just cosmetic.
 export default defineConfig({
+  // 1. Add your domain here (without trailing slash)
+  site: 'https://www.bruces-breads.com', 
+  integrations: [sitemap()],
   output: 'static',
 });
